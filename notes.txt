@@ -1,0 +1,35 @@
+- Szenario entwickeln, kontext übermitteln (stellt euch vor, wir sind beim Kunden...) [Gemeinschaftsgefühl]
+- Erklären, wo die ProcessEngine ins spiel kommt, und was sie tut
+  - task x/y könnte automatisch ausgeführt werden
+
+- Szenario zuende durchgehen
+  -> jetzt in software gießen
+  -> Was gibts für mögliche Ansätze (ein konkretes alternativbeispiel)
+    - prägnanten Vergleich ziehen zu alternativen Software-entwicklungsmöglichkeiten, anhand des Szenarios (REST-API)
+    -> Es ist ja dennoch overhead, grund dafür: man vergräbt die fachlichkeit nicht im Code
+      -> Man kann sehen was der code tut, ohne sich den code direkt anzusehen
+      -> Man kann verstehen, was der code tut, ohne dass der code verständlich sein muss
+      -> Der Prozess ist Doku, die man mit jedem Diskutieren kann, nicht nur "nerds"
+  
+  - Fachliche Entwicklung der Anwendung, basierend auf regulär entwickelten Modulen/entities
+  - Erweiterbarkeit durch eigene Entities, Services(serviceTask) und drittanbieter-anwendungen und Schnittstellen
+
+- Demo, welche das Szenario darstellt
+- ggf. kurz einige Alternativszenarien aufzählen
+- Ausblick, was zurzeit in entwicklung ist, was geht, und was noch kommt (Schlusswort)
+  - Isomorphie
+  - Offlinefähigkeit
+  - verteilte Ausführung
+
+
+
+
+
+
+
+
+
+
+
+
+# Viel mit Bildern arbeiten, die leute immer "abholen"
