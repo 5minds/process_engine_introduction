@@ -1,0 +1,128 @@
+
+@font-face{
+  font-family: 'Open Sans';
+  src: url('assets/fonts/OpenSans-Regular.ttf');
+}
+@font-face{
+  font-family: 'Yanone Kaffeesatz';
+  src: url('assets/fonts/YanoneKaffeesatz-Regular.ttf');
+}
+@font-face{
+  font-family: 'Ubuntu Mono';
+  src: url('assets/fonts/UbuntuMono-Regular.ttf');
+}
+
+body { font-family: 'Open Sans'; }
+h1, h2, h3 {
+  font-family: 'Yanone Kaffeesatz';
+  font-weight: normal;
+}
+.remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
+
+.content {
+  background-size: cover;
+}
+
+.next {
+  animation-fill-mode: both;
+  animation-duration: 160ms;
+  animation-name: fadeIn;
+}
+
+.next_slow {
+  animation-fill-mode: both;
+  animation-duration: 320ms;
+  animation-name: fadeIn;
+}
+
+.whiteFont {
+  color: white;
+  text-shadow: 0px 0px 40px rgba(0, 0, 0, 0.7) 
+}
+
+.speech {
+  display: block;
+	position: relative;
+  float: left;
+	background: #FFFFFF;
+	border: 1px solid #666;
+    max-width:250px;
+    padding:10px;
+    font-family:arial;
+    margin:0 20%;
+    font-size:14px;
+    border-radius:6px;
+    
+}
+.speech:after,
+.speech:before {
+	right: 100%;
+	bottom: 15%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+}
+
+.speech:after {
+	border-color: rgba(255, 255, 204, 0);
+	border-right-color: #FFFFFF;
+	border-width: 16px;
+	margin-top: -15px;
+  margin-right: -1px;
+}
+.speech:before {
+	border-color: rgba(255, 204, 0, 0);
+	border-right-color: #666;
+	border-width: 16px;
+	margin-top: -16px;
+}
+
+.speech_own {
+  display: block;
+  float: right;
+	position: relative;
+	background: #FFFFFF;
+	border: 1px solid #666;
+  margin-right: 13%;
+    max-width:250px;
+    padding:10px;
+    font-family:arial;
+    margin:0 20%;
+    font-size:14px;
+    border-radius:6px;
+    
+}
+.speech_own:after,
+.speech_own:before {
+	left: 100%;
+	bottom: 15%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+}
+
+.speech_own:after {
+	border-color: rgba(255, 255, 204, 0);
+	border-left-color: #FFFFFF;
+	border-width: 16px;
+	margin-top: -15px;
+  margin-left: -1px;
+}
+.speech_own:before {
+	border-color: rgba(255, 204, 0, 0);
+	border-left-color: #666;
+	border-width: 16px;
+	margin-top: -16px;
+}
+
+.newline {
+  backgrounnd-color: transparent;
+  border-color: transparent;
+  width: 100%;
+}
