@@ -7,6 +7,7 @@
   -> Was gibts für mögliche Ansätze (ein konkretes alternativbeispiel)
     - prägnanten Vergleich ziehen zu alternativen Software-entwicklungsmöglichkeiten, anhand des Szenarios (REST-API)
     -> Es ist ja dennoch overhead, grund dafür: man vergräbt die fachlichkeit nicht im Code
+    -> Der Fachliche teil der Anwendung wird von technischen getrennt, und ist unabhängig bearbeitbar
       -> Man kann sehen was der code tut, ohne sich den code direkt anzusehen
       -> Man kann verstehen, was der code tut, ohne dass der code verständlich sein muss
       -> Der Prozess ist Doku, die man mit jedem Diskutieren kann, nicht nur "nerds"
