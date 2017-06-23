@@ -22,6 +22,9 @@ h1, h2, h3 {
   font-weight: normal;
 }
 .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
+.remark-code {
+  font-size: 12px;
+}
 
 .content {
   background-size: cover;
@@ -215,4 +218,21 @@ h1, h2, h3 {
   transform: rotate(135deg);
   left: 19px;
   width: 90px;
+}
+
+.pe_chain_big {
+  position: absolute;
+  transform: rotate(135deg);
+  width: 180px;
+  top: 20%;
+}
+
+.left_half {
+  float: left;
+  width: 50%;
+}
+
+.right_halt {
+  float: right;
+  width: 50%;
 }

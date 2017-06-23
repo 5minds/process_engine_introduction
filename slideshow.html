@@ -3,9 +3,9 @@
   <head>
     <title>ProcessEngineJS</title>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="assets/animate.min.css">
-    <link rel="stylesheet" href="assets/styles.css">
     <link rel="stylesheet" href="assets/styles/font-awesome.css">
+    <link rel="stylesheet" href="assets/styles/animate.min.css">
+    <link rel="stylesheet" href="assets/styles/styles.css">
   </head>
   <body>
     <textarea id="source">
@@ -126,6 +126,63 @@ ProcessEngineJS
 
 
 ---
+class: next_slow
+background-image: url(assets/images/office.jpg)
+background-size: 200%
+
+<img class="pe_chain_big" src="assets/images/chain.svg" style="left: -6%"/>
+
+
+<div class="center_box">
+  <div class="center_box_content box_white" style="width: 85%; max-width: none;">
+![:img_width 90px](assets/images/gears.svg)
+&zwnj;
+.center[ProcessEngineJS]
+
+.left_half[
+.center[Prozessmodell vom Kunden]
+<hr class="newline">
+![:img_width 300px](assets/images/process_2.svg)
+]
+.right_half[
+.center[Entitäten/Services vom Entwickler]
+.left[
+```Typescript
+import {
+  createTransport,
+  SentMessageInfo,
+  SendMailOptions} from 'nodemailer';
+import {IMailService} from '@process-engine-js/services_contracts';
+
+export class MailService implements IMailService {
+
+  public config: any;
+
+  public async send(from: string,
+                    to: string,
+                    subject: string,
+                    message: string): Promise<SentMessageInfo> {
+
+    const transporter = createTransport(this.config.transporter);
+    const mail: SendMailOptions = {
+      from: from,
+      to: to,
+      subject: subject,
+      text: message
+    };
+
+    return transporter.sendMail(mail);
+  }
+}
+```
+]]
+
+  </div>
+</div>
+<img class="pe_chain_big" src="assets/images/chain.svg" style="right: -6%"/>
+
+
+---
 <!--
 HIER KOMMT PEJS INS SPIEL
 
@@ -157,6 +214,8 @@ HIER KOMMT PEJS INS SPIEL
         ratio: "16:9",
         countIncrementalSlides: false,
         slideNumberFormat: '',
+        highlightStyle: 'solarized-dark',
+				highlightLines: true,
       });
       document.querySelector('video').playbackRate = 0.1;
     </script>
