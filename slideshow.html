@@ -3,7 +3,6 @@
   <head>
     <title>ProcessEngineJS</title>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="assets/styles/font-awesome.css">
     <link rel="stylesheet" href="assets/styles/animate.min.css">
     <link rel="stylesheet" href="assets/styles/styles.css">
   </head>
@@ -38,7 +37,7 @@ background-image: url(assets/images/office.jpg)
 class: next_slow
 .float_left.margin_sm[&zwnj;]
 &zwnj;
-<hr class="newline">
+***
 .speech[![:img_width 90px](assets/images/car_rent.png)]
 
 
@@ -50,7 +49,7 @@ background-image: url(assets/images/office.jpg)
 
 .float_left.margin_sm[Was soll umgesetzt werden?]
 &zwnj;
-<hr class="newline">
+***
 .speech[.center[![:img_width 90px](assets/images/car_rent.png).padding_left_sm[![:img_width 90px](assets/images/process.svg)]]
 - **Prozessablauf**
 - Bestellung aufgeben
@@ -74,7 +73,7 @@ background-image: url(assets/images/office.jpg)
 
 &zwnj;
 
-<hr class="newline">
+***
 .speech[.center[![:img_width 90px](assets/images/car_rent.png).padding_left_sm[![:img_width 90px](assets/images/process.svg)]]
 - **Prozessablauf**
 - Bestellung aufgeben
@@ -87,6 +86,11 @@ background-image: url(assets/images/office.jpg)
 - Tech Stack
 - Infrastruktur
 - Services]
+
+???
+- Kunde denkit in Prozessen
+- Entwickler denkt in Code
+- zwei sichten auf gleiche Software
 
 
 ---
@@ -101,7 +105,7 @@ background-image: url(assets/images/office.jpg)
 
 
 &zwnj;
-<hr class="newline">
+***
 .speech[.center[![:img_width 90px](assets/images/car_rent.png).padding_left_sm[![:img_width 90px](assets/images/process.svg)]]
 - **Prozessablauf**
 - Bestellung aufgeben
@@ -110,11 +114,11 @@ background-image: url(assets/images/office.jpg)
 - Bestätigung senden (email)
 - Schlüssel bereitstellen]
 <img class="pe_chain" src="assets/images/chain.svg" style="left: 19px"/>
-<div class="center_box" style=" display: inline-block;width: 323px; margin-top: 40px;">
-  <div class="center_box_content box_white">
-![:img_width 90px](assets/images/gears.svg)
-&zwnj;
+<div class="center_box" style=" display: inline-block;width: 348px; margin-top: 40px;">
+  <div class="center_box_content box_white" style="width: 250px;">
 ProcessEngineJS
+<hr>
+![:img_width 90px](assets/images/gears.svg)
   </div>
 </div>
 <img class="pe_chain" src="assets/images/chain.svg" style="left: -19px"/>
@@ -124,8 +128,18 @@ ProcessEngineJS
 - Infrastruktur
 - Services]
 
+???
+- Bindeglied, bringt beide sichten zusammen
+
+- Definition Process Engine
+  - führt Modell aus (Orchestriert)
+
+- Definition PEJS
+  - Framework, stellt Toolset für eigene, angepasste PE bereit
 
 ---
+
+
 class: next_slow
 background-image: url(assets/images/office.jpg)
 background-size: 200%
@@ -133,53 +147,54 @@ background-size: 200%
 <img class="pe_chain_big" src="assets/images/chain.svg" style="left: -6%"/>
 <img class="pe_chain_big" src="assets/images/chain.svg" style="right: -6%"/>
 
-
 <div class="center_box">
-  <div class="center_box_content box_white" style="width: 85%; max-width: none; height: 580px">
-![:img_width 90px](assets/images/gears.svg)
-&zwnj;
-.center[ProcessEngineJS]
+  <div class="center_box_content box_white big_box">
 
-.left_half[
-.center[Prozessmodell vom Kunden]
-<hr class="newline">
-![:img_width 300px](assets/images/process_2_bw.svg)
-]
+.center.margin_bottom_sm[### ProcessEngineJS]
+
+???
+- Aufbau sieht so aus
 
 
 --
 
 
-.right_half[
-.center[Entitäten/Services vom Entwickler]
-<div class="entity_box box_blue">
-  <div class="left_half">
-.left[eigene Entities und Services]
-    <div class="entity">mail</div>
-    <div class="entity">reservierung</div>
-  </div>
-  <div class="right_half">
-.left[process-engine Entities]
-    <div class="entity">StartEvent</div>
-    <div class="entity">EndEvent</div>
-    <div class="entity">NodeDef</div>
-    <div class="entity">ExclusiveGateway</div>
-    <div class="entity">14 weitere ...</div>
-  </div>
-</div>
-<div class="entity_box box_orange" style="margin-bottom: 15px">
-.left[process-engine Basis]
-  <div class="entity">process_engine</div>
-  <div class="entity">core</div>
-  <div class="entity">messagebus</div>
-  <div class="entity">feature</div>
-  <div class="entity">routing</div>
-  <div class="entity">bootstrapper</div>
-  <div class="entity">datastore</div>
-  <div class="entity">iam</div>
-  <div class="entity">addict_ioc</div>
-</div>
+.left_half[
+Prozessmodell vom Kunden  
+(BPMN)
+***
+![:img_width 300px](assets/images/process_2_bw.svg)]
 
+???
+- einfacher Beispielprozess
+- muss Implementierung hinter
+
+--
+
+
+.right_half[
+.center[Entitäten u. Services vom Entwickler  
+(JavaScript)]
+
+.left.code_block[
+```Typescript
+import {
+  createTransport,
+  SentMessageInfo,
+  SendMailOptions} from 'nodemailer';
+import {IMailService} from 'mail_service_contracts';
+
+export class MailService implements IMailService {
+
+  public config: any;
+
+  public send(mailOptions: SendMailOptions): Promise<SentMessageInfo> {
+    const transporter = createTransport(this.config.transporter);
+    return transporter.sendMail(mail);
+  }
+}
+```
+]
 ]
 
   </div>
@@ -187,6 +202,8 @@ background-size: 200%
 
 
 ---
+
+
 class: next_slow
 background-image: url(assets/images/office.jpg)
 background-size: 200%
@@ -195,47 +212,104 @@ background-size: 200%
 <img class="pe_chain_big" src="assets/images/chain.svg" style="right: -6%"/>
 
 <div class="center_box">
-  <div class="center_box_content box_white" style="width: 85%; max-width: none; height: 580px;">
-![:img_width 90px](assets/images/gears.svg)
-&zwnj;
-.center[ProcessEngineJS]
+  <div class="center_box_content box_white big_box">
+
+.center.margin_bottom_sm[### ProcessEngineJS]
 
 .left_half[
-.center[Prozessmodell vom Kunden]
-<hr class="newline">
-![:img_width 300px](assets/images/process_2.svg)
-]
+Prozessmodell vom Kunden  
+(BPMN)
+***
+![:img_width 300px](assets/images/process_2_bw.svg)]
 
 
 .right_half[
-.center[Entitäten/Services vom Entwickler]
+.center[Entitäten u. Services vom Entwickler  
+(JavaScript)]
+
+.left.code_block[
+```Typescript
+import {
+  createTransport,
+  SentMessageInfo,
+  SendMailOptions} from 'nodemailer';
+import {IMailService} from 'mail_service_contracts';
+
+export class MailService implements IMailService {
+
+  public config: any;
+
+  public send(mailOptions: SendMailOptions): Promise<SentMessageInfo> {
+    const transporter = createTransport(this.config.transporter);
+    return transporter.sendMail(mail);
+  }
+}
+```
+]
+
+
 <div class="entity_box box_blue">
   <div class="left_half">
-.left[eigene Entities und Services]
-    <div class="entity glow">mail</div>
-    <div class="entity">reservierung</div>
+.left.entity_title[eigene Entitäten und Services]
+.entity[mail]
+.entity[reservierungen]
   </div>
   <div class="right_half">
-.left[process-engine Entities]
-    <div class="entity">StartEvent</div>
-    <div class="entity">EndEvent</div>
-    <div class="entity">NodeDef</div>
-    <div class="entity">ExclusiveGateway</div>
-    <div class="entity">14 weitere ...</div>
+.left.entity_title[ProcessEngine Entitäten]
+.entity[StartEvent]
+.entity[EndEvent]
+.entity[NodeDef]
+.entity[ExclusiveGateway]
+.entity[14 weitere ...]
   </div>
 </div>
-<div class="entity_box box_orange" style="margin-bottom: 15px">
-.left[process-engine Basis]
-  <div class="entity">process_engine</div>
-  <div class="entity">core</div>
-  <div class="entity">messagebus</div>
-  <div class="entity">feature</div>
-  <div class="entity">routing</div>
-  <div class="entity">bootstrapper</div>
-  <div class="entity">datastore</div>
-  <div class="entity">iam</div>
-  <div class="entity">addict_ioc</div>
+<div class="entity_box box_orange">
+.left.entity_title[ProcessEngine Basis]
+.entity[process_engine]
+.entity[core]
+.entity[messagebus]
+.entity[feature]
+.entity[routing]
+.entity[bootstrapper]
+.entity[datastore]
+.entity[iam]
+.entity[addict_ioc]
 </div>
+]
+
+  </div>
+</div>
+
+???
+- Entities = BPMN-Elemente
+- Eigene bauen
+
+
+---
+
+
+class: next_slow
+background-image: url(assets/images/office.jpg)
+background-size: 200%
+
+<img class="pe_chain_big" src="assets/images/chain.svg" style="left: -6%"/>
+<img class="pe_chain_big" src="assets/images/chain.svg" style="right: -6%"/>
+
+<div class="center_box">
+  <div class="center_box_content box_white big_box">
+
+.center.margin_bottom_sm[### ProcessEngineJS]
+
+.left_half[
+Prozessmodell vom Kunden  
+(BPMN)
+***
+![:img_width 300px](assets/images/process_2.svg)]
+
+
+.right_half[
+.center[Entitäten u. Services vom Entwickler  
+(JavaScript)]
 
 .left.code_block.glow[
 ```Typescript
@@ -253,12 +327,45 @@ export class MailService implements IMailService {
     const transporter = createTransport(this.config.transporter);
     return transporter.sendMail(mail);
   }
-}```
+}
+```
 ]
+
+
+<div class="entity_box box_blue">
+  <div class="left_half">
+.left.entity_title[eigene Entitäten und Services]
+.entity.glow[mail]
+.entity[reservierungen]
+  </div>
+  <div class="right_half">
+.left.entity_title[ProcessEngine Entitäten]
+.entity[StartEvent]
+.entity[EndEvent]
+.entity[NodeDef]
+.entity[ExclusiveGateway]
+.entity[14 weitere ...]
+  </div>
+</div>
+<div class="entity_box box_orange">
+.left.entity_title[ProcessEngine Basis]
+.entity[process_engine]
+.entity[core]
+.entity[messagebus]
+.entity[feature]
+.entity[routing]
+.entity[bootstrapper]
+.entity[datastore]
+.entity[iam]
+.entity[addict_ioc]
+</div>
 ]
 
   </div>
 </div>
+???
+- irgendwo deployen
+- kann mail senden
 
 
 ---
@@ -273,7 +380,6 @@ background-image: url(assets/images/office.jpg)
 
 
 &zwnj;
-<hr class="newline">
 .speech[.center[![:img_width 90px](assets/images/car_rent.png).padding_left_sm[![:img_width 90px](assets/images/process.svg)]]
 - **Prozessablauf**
 - Bestellung aufgeben
@@ -282,11 +388,11 @@ background-image: url(assets/images/office.jpg)
 - Bestätigung senden (email)
 - Schlüssel bereitstellen]
 <img class="pe_chain" src="assets/images/chain.svg" style="left: 19px"/>
-<div class="center_box" style=" display: inline-block;width: 323px; margin-top: 40px;">
-  <div class="center_box_content box_white">
-![:img_width 90px](assets/images/gears.svg)
-&zwnj;
+<div class="center_box" style=" display: inline-block;width: 348px; margin-top: 40px;">
+  <div class="center_box_content box_white" style="width: 250px;">
 ProcessEngineJS
+<hr>
+![:img_width 90px](assets/images/gears.svg)
   </div>
 </div>
 <img class="pe_chain" src="assets/images/chain.svg" style="left: -19px"/>
@@ -296,11 +402,18 @@ ProcessEngineJS
 - Infrastruktur
 - Services]
 
+???
+- Anwendung fertig bauen
+- Kunde glücklich
+
 
 ---
 
 <div class="appbg"></div>
 <div class="processbg"></div>
+
+???
+- Warum PE-overhead vs direkt bauen
 
 
     </textarea>
@@ -314,10 +427,9 @@ ProcessEngineJS
         ratio: "16:9",
         countIncrementalSlides: false,
         slideNumberFormat: '',
-        highlightStyle: 'solarized-dark',
+        highlightStyle: 'atom-one-dark',
 				highlightLines: true,
       });
-      document.querySelector('video').playbackRate = 0.1;
     </script>
   </body>
 </html>

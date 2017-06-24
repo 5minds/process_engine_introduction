@@ -133,7 +133,7 @@ h1, h2, h3 {
 	margin-top: -16px;
 }
 
-.newline {
+hr {
   backgrounnd-color: transparent;
   border-color: transparent;
   width: 100%;
@@ -205,6 +205,14 @@ h1, h2, h3 {
   display: inline-block;
 }
 
+.big_box {
+  width: 85%;
+  max-width: none !important;
+  height: 579px;
+  padding: 20px !important;
+  border-radius: 25px !important;
+}
+
 .box_white {
 	background: #FFFFFF;
 	border: 1px solid #666;
@@ -215,10 +223,10 @@ h1, h2, h3 {
 
 .entity_box {
   padding: 5px 0px;
-  font-size: 14px;
   border-radius:6px;
   display: block;
-  width: 100%
+  width: 100%;
+  overflow: hidden;
 }
 
 .box_orange {
@@ -236,7 +244,7 @@ h1, h2, h3 {
   border-bottom-color: #666;
   border-bottom-right-radius: 0px;
   border-bottom-left-radius: 0px;
-  overflow: auto;
+  margin-top: 30px;
 }
 
 .entity {
@@ -248,6 +256,13 @@ h1, h2, h3 {
   margin: 3px 3px;
   display: inline-block;
   position: relative;
+}
+
+.entity_title {
+  padding-left: 5px;
+  margin-right: -5px;
+  font-size: 13px;
+  margin-bottom: 6px;
 }
 
 .code_block {
@@ -264,8 +279,8 @@ h1, h2, h3 {
 }
 
 .glow {
-  border-color: rgb(30, 136, 229);
-  box-shadow: 0px 0px 10px rgb(30, 136, 229);
+  border-color: rgb(142, 36, 170);
+  box-shadow: 0px 0px 10px rgb(142, 36, 170);
 }
 
 .pe_chain {
@@ -294,4 +309,8 @@ h1, h2, h3 {
 
 .invisible {
   visibility: hidden;
+}
+
+.margin_bottom_sm * {
+  margin-bottom: 10px !important;
 }
