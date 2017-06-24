@@ -213,6 +213,61 @@ h1, h2, h3 {
   border-radius:6px;
 }
 
+.entity_box {
+  padding: 5px 0px;
+  font-size: 14px;
+  border-radius:6px;
+  display: block;
+  width: 100%
+}
+
+.box_orange {
+	border: 1px solid #666;
+  background-color: rgb(255, 224, 178);
+  border-top-width: 0px;
+  border-top-right-radius: 0px;
+  border-top-left-radius: 0px;
+}
+
+.box_blue {
+  z-index: 1;
+	border: 1px solid #666;
+  background-color: rgb(187, 222, 251);
+  border-bottom-color: #666;
+  border-bottom-right-radius: 0px;
+  border-bottom-left-radius: 0px;
+  overflow: auto;
+}
+
+.entity {
+  font-size: 12px;
+	background: rgba(255, 255, 255, 0.75);
+	border: 1px solid #666;
+  padding: 5px;
+  border-radius: 6px;
+  margin: 3px 3px;
+  display: inline-block;
+  position: relative;
+}
+
+.code_block {
+	background: rgba(255, 255, 255, 0.75);
+	border: 1px solid #666;
+  border-radius: 6px;
+  margin: 0px;
+  overflow: hidden;
+  width: 100%;
+}
+
+.code_block pre {
+  margin: 0px;
+}
+
+.glow {
+  border-color: rgb(30, 136, 229);
+  box-shadow: 0px 0px 10px rgb(30, 136, 229);
+}
+
 .pe_chain {
   position: relative;
   transform: rotate(135deg);
@@ -232,7 +287,11 @@ h1, h2, h3 {
   width: 50%;
 }
 
-.right_halt {
+.right_half {
   float: right;
   width: 50%;
+}
+
+.invisible {
+  visibility: hidden;
 }

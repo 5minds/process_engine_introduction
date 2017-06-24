@@ -70,9 +70,9 @@ background-image: url(assets/images/office.jpg)
 
 .center[
 .float_left.margin_sm[Was soll umgesetzt werden?]
-+
 .float_right.margin_sm[Wie soll es umgesetzt werden?]]
 
+&zwnj;
 
 <hr class="newline">
 .speech[.center[![:img_width 90px](assets/images/car_rent.png).padding_left_sm[![:img_width 90px](assets/images/process.svg)]]
@@ -97,10 +97,10 @@ background-image: url(assets/images/office.jpg)
 
 .center[
 .float_left.margin_sm[Was soll umgesetzt werden?]
-+
 .float_right.margin_sm[Wie soll es umgesetzt werden?]]
 
 
+&zwnj;
 <hr class="newline">
 .speech[.center[![:img_width 90px](assets/images/car_rent.png).padding_left_sm[![:img_width 90px](assets/images/process.svg)]]
 - **Prozessablauf**
@@ -110,7 +110,7 @@ background-image: url(assets/images/office.jpg)
 - Bestätigung senden (email)
 - Schlüssel bereitstellen]
 <img class="pe_chain" src="assets/images/chain.svg" style="left: 19px"/>
-<div class="center_box" style=" display: inline-block;width: 343px; margin-top: 40px;">
+<div class="center_box" style=" display: inline-block;width: 323px; margin-top: 40px;">
   <div class="center_box_content box_white">
 ![:img_width 90px](assets/images/gears.svg)
 &zwnj;
@@ -131,10 +131,71 @@ background-image: url(assets/images/office.jpg)
 background-size: 200%
 
 <img class="pe_chain_big" src="assets/images/chain.svg" style="left: -6%"/>
+<img class="pe_chain_big" src="assets/images/chain.svg" style="right: -6%"/>
 
 
 <div class="center_box">
-  <div class="center_box_content box_white" style="width: 85%; max-width: none;">
+  <div class="center_box_content box_white" style="width: 85%; max-width: none; height: 580px">
+![:img_width 90px](assets/images/gears.svg)
+&zwnj;
+.center[ProcessEngineJS]
+
+.left_half[
+.center[Prozessmodell vom Kunden]
+<hr class="newline">
+![:img_width 300px](assets/images/process_2_bw.svg)
+]
+
+
+--
+
+
+.right_half[
+.center[Entitäten/Services vom Entwickler]
+<div class="entity_box box_blue">
+  <div class="left_half">
+.left[eigene Entities und Services]
+    <div class="entity">mail</div>
+    <div class="entity">reservierung</div>
+  </div>
+  <div class="right_half">
+.left[process-engine Entities]
+    <div class="entity">StartEvent</div>
+    <div class="entity">EndEvent</div>
+    <div class="entity">NodeDef</div>
+    <div class="entity">ExclusiveGateway</div>
+    <div class="entity">14 weitere ...</div>
+  </div>
+</div>
+<div class="entity_box box_orange" style="margin-bottom: 15px">
+.left[process-engine Basis]
+  <div class="entity">process_engine</div>
+  <div class="entity">core</div>
+  <div class="entity">messagebus</div>
+  <div class="entity">feature</div>
+  <div class="entity">routing</div>
+  <div class="entity">bootstrapper</div>
+  <div class="entity">datastore</div>
+  <div class="entity">iam</div>
+  <div class="entity">addict_ioc</div>
+</div>
+
+]
+
+  </div>
+</div>
+
+
+---
+class: next_slow
+background-image: url(assets/images/office.jpg)
+background-size: 200%
+
+<img class="pe_chain_big" src="assets/images/chain.svg" style="left: -6%"/>
+<img class="pe_chain_big" src="assets/images/chain.svg" style="right: -6%"/>
+
+<div class="center_box">
+  <div class="center_box_content box_white" style="width: 85%; max-width: none; height: 580px;">
 ![:img_width 90px](assets/images/gears.svg)
 &zwnj;
 .center[ProcessEngineJS]
@@ -144,57 +205,96 @@ background-size: 200%
 <hr class="newline">
 ![:img_width 300px](assets/images/process_2.svg)
 ]
+
+
 .right_half[
 .center[Entitäten/Services vom Entwickler]
-.left[
+<div class="entity_box box_blue">
+  <div class="left_half">
+.left[eigene Entities und Services]
+    <div class="entity glow">mail</div>
+    <div class="entity">reservierung</div>
+  </div>
+  <div class="right_half">
+.left[process-engine Entities]
+    <div class="entity">StartEvent</div>
+    <div class="entity">EndEvent</div>
+    <div class="entity">NodeDef</div>
+    <div class="entity">ExclusiveGateway</div>
+    <div class="entity">14 weitere ...</div>
+  </div>
+</div>
+<div class="entity_box box_orange" style="margin-bottom: 15px">
+.left[process-engine Basis]
+  <div class="entity">process_engine</div>
+  <div class="entity">core</div>
+  <div class="entity">messagebus</div>
+  <div class="entity">feature</div>
+  <div class="entity">routing</div>
+  <div class="entity">bootstrapper</div>
+  <div class="entity">datastore</div>
+  <div class="entity">iam</div>
+  <div class="entity">addict_ioc</div>
+</div>
+
+.left.code_block.glow[
 ```Typescript
 import {
   createTransport,
   SentMessageInfo,
   SendMailOptions} from 'nodemailer';
-import {IMailService} from '@process-engine-js/services_contracts';
+import {IMailService} from 'mail_service_contracts';
 
 export class MailService implements IMailService {
 
   public config: any;
 
-  public async send(from: string,
-                    to: string,
-                    subject: string,
-                    message: string): Promise<SentMessageInfo> {
-
+  public send(mailOptions: SendMailOptions): Promise<SentMessageInfo> {
     const transporter = createTransport(this.config.transporter);
-    const mail: SendMailOptions = {
-      from: from,
-      to: to,
-      subject: subject,
-      text: message
-    };
-
     return transporter.sendMail(mail);
   }
-}
-```
-]]
+}```
+]
+]
 
   </div>
 </div>
-<img class="pe_chain_big" src="assets/images/chain.svg" style="right: -6%"/>
 
 
 ---
-<!--
-HIER KOMMT PEJS INS SPIEL
 
-<hr class="newline margin_bottom_lg">
-.center[= Softwarepaket]
-<div class="center_box">
-  <div class="center_box_content">
-    <div class="appbg"></div>
-    <div class="processbg"></div>
+
+class: next_slow, blackFont
+background-image: url(assets/images/office.jpg)
+
+.center[
+.float_left.margin_sm[Was soll umgesetzt werden?]
+.float_right.margin_sm[Wie soll es umgesetzt werden?]]
+
+
+&zwnj;
+<hr class="newline">
+.speech[.center[![:img_width 90px](assets/images/car_rent.png).padding_left_sm[![:img_width 90px](assets/images/process.svg)]]
+- **Prozessablauf**
+- Bestellung aufgeben
+- ggf. genehmigen
+- Reservierung speichern
+- Bestätigung senden (email)
+- Schlüssel bereitstellen]
+<img class="pe_chain" src="assets/images/chain.svg" style="left: 19px"/>
+<div class="center_box" style=" display: inline-block;width: 323px; margin-top: 40px;">
+  <div class="center_box_content box_white">
+![:img_width 90px](assets/images/gears.svg)
+&zwnj;
+ProcessEngineJS
   </div>
 </div>
--->
+<img class="pe_chain" src="assets/images/chain.svg" style="left: -19px"/>
+.speech_own[.center[![:img_width 90px](assets/images/toolbox.svg)]
+- **implementierung**
+- Tech Stack
+- Infrastruktur
+- Services]
 
 
 ---
