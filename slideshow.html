@@ -153,29 +153,29 @@ background-size: 200%
 .center.margin_bottom_sm[### ProcessEngineJS]
 
 ???
-- Aufbau sieht so aus
+- Prozess ausführen benötigt zwei dinge
 
 
 --
 
 
 .left_half[
-Prozessmodell vom Kunden  
+Auszuführender Prozess  
 (BPMN)
 ***
 ![:img_width 300px](assets/images/process_2_bw.svg)]
 
 ???
-- einfacher Beispielprozess
-- muss Implementierung hinter
+- einen Prozess
+  - einfacher Beispielprozess
+  - muss Implementierung hinter
 
 --
 
 
 .right_half[
-.center[Entitäten u. Services vom Entwickler  
+.center[Implementierung der Prozesskomponenten
 (JavaScript)]
-
 .left.code_block[
 ```Typescript
 import {
@@ -199,6 +199,8 @@ export class MailService implements IMailService {
 
   </div>
 </div>
+???
+- Implementierung der Prozesskomponenten
 
 
 ---
@@ -217,16 +219,15 @@ background-size: 200%
 .center.margin_bottom_sm[### ProcessEngineJS]
 
 .left_half[
-Prozessmodell vom Kunden  
+Auszuführender Prozess  
 (BPMN)
 ***
 ![:img_width 300px](assets/images/process_2_bw.svg)]
 
 
 .right_half[
-.center[Entitäten u. Services vom Entwickler  
+.center[Implementierung der Prozesskomponenten
 (JavaScript)]
-
 .left.code_block[
 ```Typescript
 import {
@@ -247,12 +248,11 @@ export class MailService implements IMailService {
 ```
 ]
 
-
 <div class="entity_box box_blue">
   <div class="left_half">
-.left.entity_title[eigene Entitäten und Services]
-.entity[mail]
-.entity[reservierungen]
+.left.entity_title[Eigene Entitäten und Services]
+.entity[MailService]
+.entity[MailReportEntity]
   </div>
   <div class="right_half">
 .left.entity_title[ProcessEngine Entitäten]
@@ -301,14 +301,14 @@ background-size: 200%
 .center.margin_bottom_sm[### ProcessEngineJS]
 
 .left_half[
-Prozessmodell vom Kunden  
+Auszuführender Prozess  
 (BPMN)
 ***
 ![:img_width 300px](assets/images/process_2.svg)]
 
 
 .right_half[
-.center[Entitäten u. Services vom Entwickler  
+.center[Implementierung der Prozesskomponenten 
 (JavaScript)]
 
 .left.code_block.glow[
@@ -334,9 +334,9 @@ export class MailService implements IMailService {
 
 <div class="entity_box box_blue">
   <div class="left_half">
-.left.entity_title[eigene Entitäten und Services]
-.entity.glow[mail]
-.entity[reservierungen]
+.left.entity_title[Eigene Entitäten und Services]
+.entity.glow[MailService]
+.entity[MailReportEntity]
   </div>
   <div class="right_half">
 .left.entity_title[ProcessEngine Entitäten]
