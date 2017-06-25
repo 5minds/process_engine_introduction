@@ -20,7 +20,10 @@ background-image: url(assets/images/gears.jpg)
 
 # ProcessEngineJS
 Demo einer verteilen Typescript Process Engine
-
+???
+- Projekt vorstellen
+- stellt euch szenario vor
+- Kunde meldet sich
 
 ---
 
@@ -28,8 +31,7 @@ Demo einer verteilen Typescript Process Engine
 class: next_slow
 background-image: url(assets/images/office.jpg)
 ???
-- wir
-
+- hat Autovermietung
 
 --
 
@@ -39,6 +41,11 @@ class: next_slow
 &zwnj;
 ***
 .speech[![:img_width 90px](assets/images/car_rent.png)]
+???
+- will reservierungs-prozess automatisieren
+- bestellen läuft manuell
+- sachbearbeiter -> email, eintragen, antworten
+- Kunde weiß was er von der Software will
 
 
 ---
@@ -59,7 +66,8 @@ background-image: url(assets/images/office.jpg)
 - Schlüssel bereitstellen]
 
 ???
-- client: prozess
+- client: prozessablauf & erwartungen
+- unsere Aufgabe: technische Umsetzung -> in code gießen -> Programm erstellen
 
 ---
 
@@ -88,9 +96,9 @@ background-image: url(assets/images/office.jpg)
 - Services]
 
 ???
-- Kunde denkit in Prozessen
-- Entwickler denkt in Code
-- zwei sichten auf gleiche Software
+- Fachliche (was) vs technische (wie) sicht auf gleiche software
+- herkömmlich: Programm beinhaltete fachliche und technische implementierung (verschmolzen)
+- alternativ: ProcessEngine bauen
 
 
 ---
@@ -129,13 +137,17 @@ ProcessEngineJS
 - Services]
 
 ???
-- Bindeglied, bringt beide sichten zusammen
+- Lose kopplung, bringt beide sichten zusammen
 
 - Definition Process Engine
   - führt Modell aus (Orchestriert)
+  - herkömmlich: einzelne Serveranwendung
 
 - Definition PEJS
-  - Framework, stellt Toolset für eigene, angepasste PE bereit
+  - Framework, stellt Toolset bereit, um eigene PE zu bauen, die aus beliebig vielen teilnehmern/clients auf verschiedensten geräten besteht
+  - (verteilt), einzeln oder mehrere führen prozess aus, je nach features/rechten/verfügbarkeit
+
+- ProcessEngine-Implementierung sieht wie folgt aus:
 
 ---
 
@@ -168,7 +180,7 @@ Auszuführender Prozess
 ???
 - einen Prozess
   - einfacher Beispielprozess
-  - muss Implementierung hinter
+  - muss Implementierung für Prozesskomponenten her
 
 --
 
@@ -200,7 +212,9 @@ export class MailService implements IMailService {
   </div>
 </div>
 ???
-- Implementierung der Prozesskomponenten
+- Wenn prozesskomponenten-implementierungen vorhanden: muss ausgeführt werden
+- Prozess und implementierung müssen zusammengebracht werden
+- hier kommt PEJS ins spiel
 
 
 ---
@@ -259,7 +273,7 @@ export class MailService implements IMailService {
 .entity[StartEvent]
 .entity[EndEvent]
 .entity[NodeDef]
-.entity[ExclusiveGateway]
+.entity[ServiceTask]
 .entity[14 weitere ...]
   </div>
 </div>
@@ -281,9 +295,11 @@ export class MailService implements IMailService {
 </div>
 
 ???
-- Entities = BPMN-Elemente
-- Eigene bauen
-
+- viele kleine komponenten
+- blau = weitere Services
+- orange = basis/kern von PEJS
+- blau + orange = gesamte anwendung / deployable client
+- Wenn process_engine den task ausführt, und bei "Mail Senden" ankommt
 
 ---
 
@@ -340,16 +356,16 @@ export class MailService implements IMailService {
   </div>
   <div class="right_half">
 .left.entity_title[ProcessEngine Entitäten]
+.entity.glow[ServiceTask]
+.entity.glow[NodeInstance]
 .entity[StartEvent]
 .entity[EndEvent]
-.entity[NodeDef]
-.entity[ExclusiveGateway]
-.entity[14 weitere ...]
+.entity[weitere...]
   </div>
 </div>
 <div class="entity_box box_orange">
 .left.entity_title[ProcessEngine Basis]
-.entity[process_engine]
+.entity.glow[process_engine]
 .entity[core]
 .entity[messagebus]
 .entity[feature]
@@ -364,8 +380,10 @@ export class MailService implements IMailService {
   </div>
 </div>
 ???
+- processengine -> NodeInstance (nicht pfeil oder gate) -> ServiceTask -> MailService
 - irgendwo deployen
 - kann mail senden
+- So viel zum aufbau einer ProcessEngineJS-Anwendung
 - TODO: Analogie finden
 
 
@@ -404,8 +422,10 @@ ProcessEngineJS
 - Services]
 
 ???
-- Anwendung fertig bauen
+- Anwendung mit PEJS fertig bauen
 - Kunde glücklich
+- alternative: Direkt implementieren
+  - Programm bauen, dass kundenprozesse direkt implementiert
 
 
 ---
@@ -439,6 +459,8 @@ Alternative: Direkt implementieren
 - Tech Stack
 - Infrastruktur
 - Services]
+???
+- Warum ProcessEngine-Overhead aufbringen?
 
 
 ---
@@ -446,6 +468,9 @@ Alternative: Direkt implementieren
 class: next_slow, blackFont
 background-image: url(assets/images/chart_background_2.jpg)
 # .center[Warum den ProcessEngine-Overhead aufbringen?]
+???
+- zusammengefasst: Trennung von fachlicher und technischer Implementierung
+- Programm betrachten, ohne code zu sehen
 
 
 --
@@ -458,6 +483,8 @@ class: next_slow
 <hr>
 .center[ohne den Code zu sehen]
 </div>
+???
+- Programm verstehen, ohne Quelltext zu durchsuchen
 
 
 --
@@ -470,6 +497,8 @@ class: next_slow
 <hr>
 .center[ohne Quelltext zu durchsuchen]
 </div>
+???
+- Programmablauf anpassen, ohne Code anzufassen
 
 
 --
@@ -482,6 +511,9 @@ class: next_slow
 <hr>
 .center[ohne den Code anzufassen]
 </div>
+???
+- Fachliche Implementierung gestützt, statt vergraben
+- Modell = Doku und Bestandteil, auch für nicht-nerds
 
 
 --
@@ -504,6 +536,8 @@ TODO: Besseres "Verstehen"-Foto finden (close-up?)
 class: center, middle, next_slow, blackFont
 background-image: url(assets/images/chart_background_2.jpg)
 # .center[Demo-Zeit!]
+???
+TODO: Demo vorbereiten
 
 
 ---
@@ -579,7 +613,14 @@ TODO: einzelne ausblick-punkte auflisten
 --
 
 ***
-# .center[Vielen Dank!]
+# .center[Vielen Dank fürs zuhören!]
+
+
+--
+
+
+***
+# .center[... Fragen?]
 
 
     </textarea>
