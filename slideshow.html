@@ -366,6 +366,7 @@ export class MailService implements IMailService {
 ???
 - irgendwo deployen
 - kann mail senden
+- TODO: Analogie finden
 
 
 ---
@@ -409,11 +410,92 @@ ProcessEngineJS
 
 ---
 
-<div class="appbg"></div>
-<div class="processbg"></div>
+
+class: next_slow, blackFont
+background-image: url(assets/images/office.jpg)
+
+.center[
+.float_left.margin_sm[Was soll umgesetzt werden?]
+.float_right.margin_sm[Wie soll es umgesetzt werden?]]
+
+
+&zwnj;
+.speech[.center[![:img_width 90px](assets/images/car_rent.png).padding_left_sm[![:img_width 90px](assets/images/process.svg)]]
+- **Prozessablauf**
+- Bestellung aufgeben
+- ggf. genehmigen
+- Reservierung speichern
+- Bestätigung senden (email)
+- Schlüssel bereitstellen]
+<div class="center_box" style=" display: inline-block;width: 537px; margin-top: 40px;">
+  <div class="center_box_content box_white" style="width: 336px; max-width: none; height: 230px">
+Alternative: Direkt implementieren
+    <div class="appbg" style="top: 175px; left: 528px"></div>
+    <div class="processbg" style="position: absolute; top: 175px; left: 528px"></div>
+  </div>
+</div>
+.speech_own[.center[![:img_width 90px](assets/images/toolbox.svg)]
+- **implementierung**
+- Tech Stack
+- Infrastruktur
+- Services]
+
+
+---
+
+
+# .center[Warum den ProcessEngine-Overhead aufbringen?]
+
+
+--
+
+
+class: next_slow
+<div class="overhead_part">
+.center[#### Das Programm betrachten]
+![:img_width 100%](assets/images/see.jpg)
+<hr>
+.center[ohne den Code zu sehen]
+</div>
+
+
+--
+
+
+class: next_slow
+<div class="overhead_part">
+.center[#### Die Programm verstehen]
+![:img_width 100%](assets/images/grasp.jpg)
+<hr>
+.center[ohne Quelltext zu durchsuchen]
+</div>
+
+
+--
+
+
+class: next_slow
+<div class="overhead_part">
+.center[#### Den Ablauf anpassen]
+![:img_width 100%](assets/images/edit.jpg)
+<hr>
+.center[ohne den Code anzufassen]
+</div>
+
+
+--
+
+
+class: next_slow
+***
+***
+***
+#### .center[Die Fachliche Implementierung wird durch Software gestützt, statt in ihr vergraben]
+#### .center[Das Modell ist Doku und Bestandteil zugleich, und kann auch mit nicht-nerds besprochen werden]
 
 ???
-- Warum PE-overhead vs direkt bauen
+TODO: Wallpaper setzen
+TODO: Besseres "Verstehen"-Foto finden (close-up?)
 
 
     </textarea>
