@@ -1,4 +1,3 @@
-
 @font-face{
   font-family: 'Open Sans';
   src: url('../fonts/OpenSans-Regular.ttf');
@@ -162,7 +161,7 @@ hr {
 }
 
 .appbg {
-  background-image: url('../images/app.svg');
+  background-image: url('../img/app.svg');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -176,7 +175,7 @@ hr {
 }
 
 .processbg {
-  background-image: url(../images/process.svg);
+  background-image: url(../img/process.svg);
   background-size: 70%;
   background-repeat: no-repeat;
   background-position: center;

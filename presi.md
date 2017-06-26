@@ -1,14 +1,3 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>ProcessEngineJS</title>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="assets/styles/animate.min.css">
-    <link rel="stylesheet" href="assets/styles/styles.css">
-  </head>
-  <body>
-    <textarea id="source">
-
 layout: true
 class: content
 
@@ -16,7 +5,7 @@ class: content
 
 
 class: center, middle, whiteFont
-background-image: url(assets/images/gears.jpg)
+background-image: url(img/gears.jpg)
 
 # ProcessEngineJS
 Demo einer verteilen Typescript Process Engine
@@ -29,7 +18,7 @@ Demo einer verteilen Typescript Process Engine
 
 
 class: next_slow
-background-image: url(assets/images/office.jpg)
+background-image: url(img/office.jpg)
 ???
 - hat Autovermietung
 
@@ -40,7 +29,7 @@ class: next_slow
 .float_left.margin_sm[&zwnj;]
 &zwnj;
 ***
-.speech[![:img_width 90px](assets/images/car_rent.png)]
+.speech[![:img_width 90px](img/car_rent.png)]
 ???
 - will reservierungs-prozess automatisieren
 - bestellen läuft manuell
@@ -52,12 +41,12 @@ class: next_slow
 
 
 class: next_slow, blackFont
-background-image: url(assets/images/office.jpg)
+background-image: url(img/office.jpg)
 
 .float_left.margin_sm[Was soll umgesetzt werden?]
 &zwnj;
 ***
-.speech[.center[![:img_width 90px](assets/images/car_rent.png).padding_left_sm[![:img_width 90px](assets/images/process.svg)]]
+.speech[.center[![:img_width 90px](img/car_rent.png).padding_left_sm[![:img_width 90px](img/process.svg)]]
 - **Prozessablauf**
 - Bestellung aufgeben
 - ggf. genehmigen
@@ -73,7 +62,7 @@ background-image: url(assets/images/office.jpg)
 
 
 class: next_slow, blackFont
-background-image: url(assets/images/office.jpg)
+background-image: url(img/office.jpg)
 
 .center[
 .float_left.margin_sm[Was soll umgesetzt werden?]
@@ -82,14 +71,14 @@ background-image: url(assets/images/office.jpg)
 &zwnj;
 
 ***
-.speech[.center[![:img_width 90px](assets/images/car_rent.png).padding_left_sm[![:img_width 90px](assets/images/process.svg)]]
+.speech[.center[![:img_width 90px](img/car_rent.png).padding_left_sm[![:img_width 90px](img/process.svg)]]
 - **Prozessablauf**
 - Bestellung aufgeben
 - ggf. genehmigen
 - Reservierung speichern
 - Bestätigung senden (email)
 - Schlüssel bereitstellen]
-.speech_own[.center[![:img_width 90px](assets/images/toolbox.svg)]
+.speech_own[.center[![:img_width 90px](img/toolbox.svg)]
 - **implementierung**
 - Tech Stack
 - Infrastruktur
@@ -105,7 +94,7 @@ background-image: url(assets/images/office.jpg)
 
 
 class: next_slow, blackFont
-background-image: url(assets/images/office.jpg)
+background-image: url(img/office.jpg)
 
 .center[
 .float_left.margin_sm[Was soll umgesetzt werden?]
@@ -114,23 +103,23 @@ background-image: url(assets/images/office.jpg)
 
 &zwnj;
 ***
-.speech[.center[![:img_width 90px](assets/images/car_rent.png).padding_left_sm[![:img_width 90px](assets/images/process.svg)]]
+.speech[.center[![:img_width 90px](img/car_rent.png).padding_left_sm[![:img_width 90px](img/process.svg)]]
 - **Prozessablauf**
 - Bestellung aufgeben
 - ggf. genehmigen
 - Reservierung speichern
 - Bestätigung senden (email)
 - Schlüssel bereitstellen]
-<img class="pe_chain" src="assets/images/chain.svg" style="left: 19px"/>
+<img class="pe_chain" src="img/chain.svg" style="left: 19px"/>
 <div class="center_box" style=" display: inline-block;width: 348px; margin-top: 40px;">
   <div class="center_box_content box_white" style="width: 250px;">
 ProcessEngineJS
 <hr>
-![:img_width 90px](assets/images/gears.svg)
+![:img_width 90px](img/gears.svg)
   </div>
 </div>
-<img class="pe_chain" src="assets/images/chain.svg" style="left: -19px"/>
-.speech_own[.center[![:img_width 90px](assets/images/toolbox.svg)]
+<img class="pe_chain" src="img/chain.svg" style="left: -19px"/>
+.speech_own[.center[![:img_width 90px](img/toolbox.svg)]
 - **implementierung**
 - Tech Stack
 - Infrastruktur
@@ -153,11 +142,11 @@ ProcessEngineJS
 
 
 class: next_slow
-background-image: url(assets/images/office.jpg)
+background-image: url(img/office.jpg)
 background-size: 200%
 
-<img class="pe_chain_big" src="assets/images/chain.svg" style="left: -6%"/>
-<img class="pe_chain_big" src="assets/images/chain.svg" style="right: -6%"/>
+<img class="pe_chain_big" src="img/chain.svg" style="left: -6%"/>
+<img class="pe_chain_big" src="img/chain.svg" style="right: -6%"/>
 
 <div class="center_box">
   <div class="center_box_content box_white big_box">
@@ -175,7 +164,7 @@ background-size: 200%
 Auszuführender Prozess  
 (BPMN)
 ***
-![:img_width 300px](assets/images/process_2_bw.svg)]
+![:img_width 300px](img/process_2_bw.svg)]
 
 ???
 - einen Prozess
@@ -221,11 +210,11 @@ export class MailService implements IMailService {
 
 
 class: next_slow
-background-image: url(assets/images/office.jpg)
+background-image: url(img/office.jpg)
 background-size: 200%
 
-<img class="pe_chain_big" src="assets/images/chain.svg" style="left: -6%"/>
-<img class="pe_chain_big" src="assets/images/chain.svg" style="right: -6%"/>
+<img class="pe_chain_big" src="img/chain.svg" style="left: -6%"/>
+<img class="pe_chain_big" src="img/chain.svg" style="right: -6%"/>
 
 <div class="center_box">
   <div class="center_box_content box_white big_box">
@@ -236,7 +225,7 @@ background-size: 200%
 Auszuführender Prozess  
 (BPMN)
 ***
-![:img_width 300px](assets/images/process_2_bw.svg)]
+![:img_width 300px](img/process_2_bw.svg)]
 
 
 .right_half[
@@ -305,11 +294,11 @@ export class MailService implements IMailService {
 
 
 class: next_slow
-background-image: url(assets/images/office.jpg)
+background-image: url(img/office.jpg)
 background-size: 200%
 
-<img class="pe_chain_big" src="assets/images/chain.svg" style="left: -6%"/>
-<img class="pe_chain_big" src="assets/images/chain.svg" style="right: -6%"/>
+<img class="pe_chain_big" src="img/chain.svg" style="left: -6%"/>
+<img class="pe_chain_big" src="img/chain.svg" style="right: -6%"/>
 
 <div class="center_box">
   <div class="center_box_content box_white big_box">
@@ -320,7 +309,7 @@ background-size: 200%
 Auszuführender Prozess  
 (BPMN)
 ***
-![:img_width 300px](assets/images/process_2.svg)]
+![:img_width 300px](img/process_2.svg)]
 
 
 .right_half[
@@ -391,7 +380,7 @@ export class MailService implements IMailService {
 
 
 class: next_slow, blackFont
-background-image: url(assets/images/office.jpg)
+background-image: url(img/office.jpg)
 
 .center[
 .float_left.margin_sm[Was soll umgesetzt werden?]
@@ -399,23 +388,23 @@ background-image: url(assets/images/office.jpg)
 
 
 &zwnj;
-.speech[.center[![:img_width 90px](assets/images/car_rent.png).padding_left_sm[![:img_width 90px](assets/images/process.svg)]]
+.speech[.center[![:img_width 90px](img/car_rent.png).padding_left_sm[![:img_width 90px](img/process.svg)]]
 - **Prozessablauf**
 - Bestellung aufgeben
 - ggf. genehmigen
 - Reservierung speichern
 - Bestätigung senden (email)
 - Schlüssel bereitstellen]
-<img class="pe_chain" src="assets/images/chain.svg" style="left: 19px"/>
+<img class="pe_chain" src="img/chain.svg" style="left: 19px"/>
 <div class="center_box" style=" display: inline-block;width: 348px; margin-top: 40px;">
   <div class="center_box_content box_white" style="width: 250px;">
 ProcessEngineJS
 <hr>
-![:img_width 90px](assets/images/gears.svg)
+![:img_width 90px](img/gears.svg)
   </div>
 </div>
-<img class="pe_chain" src="assets/images/chain.svg" style="left: -19px"/>
-.speech_own[.center[![:img_width 90px](assets/images/toolbox.svg)]
+<img class="pe_chain" src="img/chain.svg" style="left: -19px"/>
+.speech_own[.center[![:img_width 90px](img/toolbox.svg)]
 - **implementierung**
 - Tech Stack
 - Infrastruktur
@@ -432,7 +421,7 @@ ProcessEngineJS
 
 
 class: next_slow, blackFont
-background-image: url(assets/images/office.jpg)
+background-image: url(img/office.jpg)
 
 .center[
 .float_left.margin_sm[Was soll umgesetzt werden?]
@@ -440,7 +429,7 @@ background-image: url(assets/images/office.jpg)
 
 
 &zwnj;
-.speech[.center[![:img_width 90px](assets/images/car_rent.png).padding_left_sm[![:img_width 90px](assets/images/process.svg)]]
+.speech[.center[![:img_width 90px](img/car_rent.png).padding_left_sm[![:img_width 90px](img/process.svg)]]
 - **Prozessablauf**
 - Bestellung aufgeben
 - ggf. genehmigen
@@ -454,7 +443,7 @@ Alternative: Direkt implementieren
     <div class="processbg" style="position: absolute; top: 175px; left: 528px"></div>
   </div>
 </div>
-.speech_own[.center[![:img_width 90px](assets/images/toolbox.svg)]
+.speech_own[.center[![:img_width 90px](img/toolbox.svg)]
 - **implementierung**
 - Tech Stack
 - Infrastruktur
@@ -466,7 +455,7 @@ Alternative: Direkt implementieren
 ---
 
 class: next_slow, blackFont
-background-image: url(assets/images/chart_background_2.jpg)
+background-image: url(img/chart_background_2.jpg)
 # .center[Warum den ProcessEngine-Overhead aufbringen?]
 ???
 - zusammengefasst: Trennung von fachlicher und technischer Implementierung
@@ -479,7 +468,7 @@ background-image: url(assets/images/chart_background_2.jpg)
 class: next_slow
 <div class="overhead_part">
 .center[#### Das Programm betrachten]
-<img src="assets/images/see.jpg", style="width: 100%; border-radius: 2px"/>
+<img src="img/see.jpg", style="width: 100%; border-radius: 2px"/>
 <hr>
 .center[ohne den Code zu sehen]
 </div>
@@ -493,7 +482,7 @@ class: next_slow
 class: next_slow
 <div class="overhead_part">
 .center[#### Das Programm verstehen]
-<img src="assets/images/grasp.jpg", style="width: 100%; border-radius: 2px"/>
+<img src="img/grasp.jpg", style="width: 100%; border-radius: 2px"/>
 <hr>
 .center[ohne Quelltext zu durchsuchen]
 </div>
@@ -507,7 +496,7 @@ class: next_slow
 class: next_slow
 <div class="overhead_part">
 .center[#### Den Ablauf anpassen]
-<img src="assets/images/edit.jpg", style="width: 100%; border-radius: 2px"/>
+<img src="img/edit.jpg", style="width: 100%; border-radius: 2px"/>
 <hr>
 .center[ohne den Code anzufassen]
 </div>
@@ -534,7 +523,7 @@ TODO: Besseres "Verstehen"-Foto finden (close-up?)
 
 
 class: center, middle, next_slow, blackFont
-background-image: url(assets/images/chart_background_2.jpg)
+background-image: url(img/chart_background_2.jpg)
 # .center[Demo-Zeit!]
 ???
 TODO: Demo vorbereiten
@@ -544,7 +533,7 @@ TODO: Demo vorbereiten
 
 
 class: left, next_slow, blackFont
-background-image: url(assets/images/chart_background_2.jpg)
+background-image: url(img/chart_background_2.jpg)
 .left_half[
 # Mögliche Szenarien
 ]
@@ -580,7 +569,7 @@ TODO: einzelne szenarion auflisten
 ---
 
 class: left, next_slow, blackFont
-background-image: url(assets/images/chart_background_2.jpg)
+background-image: url(img/chart_background_2.jpg)
 # .left_half[Ausblick]
 
 --
@@ -622,21 +611,3 @@ TODO: einzelne ausblick-punkte auflisten
 ***
 # .center[... Fragen?]
 
-
-    </textarea>
-    <script src="assets/remark.min.js" type="text/javascript"></script>
-    <script>
-      remark.macros.img_width = function (width) {
-        var url = this;
-        return '<img src="' + url + '" style="width: ' + width + '" />';
-      };
-      remark.create({
-        ratio: "16:9",
-        countIncrementalSlides: false,
-        slideNumberFormat: '',
-        highlightStyle: 'atom-one-dark',
-				highlightLines: true,
-      });
-    </script>
-  </body>
-</html>
