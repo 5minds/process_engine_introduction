@@ -1,5 +1,6 @@
 layout: true
 class: content
+background-image: url(img/office_2_bright.jpg)
 
 ---
 
@@ -86,7 +87,7 @@ Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie co
 ]]
 ]
 .right_half.left[
-![:img_width 59%](img/bad_placement.svg)
+![:img_width 57%](img/bad_placement.svg)
 ]
 ???
 - Umsetzung der Kundenanforderungen passiert genau da
@@ -160,6 +161,7 @@ class: top
 ---
 
 
+background-image: url(img/chart_background_2.jpg)
 ![:img_width 100%](img/process_2.svg)
 ???
 - Einzelne Prozesselemente erklären
@@ -250,7 +252,8 @@ background-image: url(img/chart_background_2.jpg)
 ---
 
 
-class: center, middle
+class: center, middle, blackFont
+background-image: url(img/collaborate_bright.jpg)
 ## Eine ProcessEngine verbindet die vorteile beider Welten
 Eine direkte einbindung der Fachlichen Prozesse
 
@@ -262,6 +265,8 @@ Basierend auf der technischen Umsetzung eines modernen Stacks
 ---
 
 
+class: middle, blackFont
+background-image: url(img/collaborate_bright.jpg)
 ## Die ProcessEngineJS
 Auf Typescript basierendes Framework zum erstellen eigener, verteilter ProcessEngines!
 - Typescript
@@ -284,5 +289,6 @@ Vorteile gegenüber anderer ProcessEngines:
 ---
 
 
-class: center, middle
+class: center, middle, blackFont
+background-image: url(img/collaborate_bright.jpg)
 # ... Fragen?
