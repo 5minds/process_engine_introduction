@@ -1,0 +1,41 @@
+0. Wir sind die PottJS GmbH
+1. PO stellt anforderungen (Lorem Ipsum)
+2. Entwickler setzt code aufgrund der Anforderung um
+  -> herkömmlich: liefer fertige, coole, sauber entwickelte app (clean code, ioc, microservice)
+3. HAT NICHT FUNKTIONIENRT!! das wollte der kunde nicht so haben
+  -> zeigen: Code an vielen stellen verteilt
+4. Lösung: gemeinsame sprache, Zusammen BPMN entwickeln
+
+5. Beispiel: Einfaches Diagramm
+  -> Kann größer werden: Autoreservierung-Diagramm (Demo-Beispiel)
+
+6. "Warum der overhead"-Folien, aber dritten punkt streichen
+
+7. Großen Prozess zeigen (Brauerei-Retoure)(es geht auch um echt große Prozesse) (Echtes Diagramm, dass tatsächlich benutzt wird, die schon immer existieren)
+  -> Man sitzt gemeinsam an einem Tisch, entwickelt es zusammen, reden die gleiche Sprache, gibt trotz Projektgröße weniger Verständnisschwierigkeiten
+
+8. Demo Prozess
+  -> Prozess grob erklären, durchgehen (was passiert wo)
+
+9. Demo starten
+  -> Erster durchgang: Es geht
+  -> Zweiter durchgang: Änderung direkt angewendet -> kein Codegenerator
+  -> ggf. dritter durchgang: Tokendetails (zeigen, wo er lang gelaufen ist)
+
+10. Man hat die Vorteile beider Welten weil:
+11. Technischen Stack beschreiben (IoC, Microprozesse)
+  -> Feature liste
+
+12. Q+A
+
+
+- "Warum den overhead aufbringen" ändern zu "Warum lohnt es sich so zu arbeiten?"
+- auf Folien weniger drauf
+- weniger text, icons größer
+- Warum das funktioniert ans Ende der Präsi packen
+- stichpunkte zeitgleich, folien vollständig
+- Kunde: Prosa
+- Entwickler: Code
+
+
+Falls frage kommt: uml kann das nicht alles abbilden
