@@ -1,0 +1,37 @@
+-> Ich will ein kleines Rollenspiel mit euch machen
+  -> Wir die PottJS GmbH
+
+-> Seht euch den kunden an: unzufrieden bei shiny app
+
+-> Weniger geschwindigkeit bei "Da ist der code"-folie, weil da tatsächlich was erklärt werden muss
+  -> Wir haben rechts das, links das andere
+
+Kundensprache: Zettel statt ablaufdiagramm
+
+-> Happy dev -> mit sonnenbrille
+
+-> Erste Autoreservierungsfolie ersetzen mit brauerei-folie
+  -> "Warum so arbeiten"-folie
+    -> Autoreservierungs-folie
+
+  
+-> "Gleiche Sprache"-Folie: BPMN (Business Process Model Notation)
+
+-> Miet-prozess: Gruppieren, etwas gröber erklären
+
+-> "Warum so arbeiten"-folie
+  -> Auf einzelne Folien (drei insgesamt) (Überschrift bleibt)
+  -> Dritte Folie: Autovermietungsprozess ausgebelicht als Hintergrund
+    -> "Überlegt mal, Das Modell ist Doku und Bestandteil zu gleich, kann auch mit nicht-nerds besproche werden"
+    -> Hintergrund als Übergang verwenden -> Autovermeitungsbeispiel
+
+
+-> "Verbinden beider Welten"-Folie ans ende packen, als Fazit-Folie
+
+-> Grobe überblick anderer ProcessEngines
+
+-> (vor)letzte Folie noch etwas anpassen
+
+-> Weniger notitzen, dafür die Übergänge genauer
+
+-> Am ende: Danke fürs zuhören & Danke an QFL & HUF

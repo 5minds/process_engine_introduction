@@ -2,6 +2,7 @@ layout: true
 class: content
 background-image: url(img/office_2_bright.jpg)
 
+
 ---
 
 
@@ -9,8 +10,9 @@ class: center, middle, whiteFont
 background-image: url(img/gears.jpg)
 
 # ProcessEngineJS
-Demo einer verteilten Typescript Process Engine
+Demo einer verteilten TypeScript Process Engine
 ???
+- Ich will ein kleines Rollenspiel mit euch machen
 - Unser unternehmen, die PottJS GmbH
 - Konnte vor 3 Monaten einen super Auftrag an Land ziehen
 
@@ -67,11 +69,7 @@ class: middle
 ![:img_width 100%](img/shiny_app.svg)
 ]
 ???
-- Kunde nicht _wirklich_ zufrieden
-- Details passen nicht
-- Anforderungen nicht genau beachtet
-- Anforderungen mittlerweile geändert
-- Funktionalität nicht _ganz_ vollständig
+- Seht euch den kunden an: unzufrieden bei shiny app
 - Warum?
 
 
@@ -106,7 +104,7 @@ class: top
 ]
 .right_half[
 .speech[
-![:img_width 100%](img/process_flow.svg)
+![:img_width 100%](img/documents.svg)
 ]
 ]
 ]
@@ -151,18 +149,21 @@ class: top
 ]
 ]
 ]
+.center[# BPMN]
+.center[### Business Process Model and Notation]
 ???
 - Die gleiche Sprache sprechen (BPMN)
 - Realisiert durch Process Engine
 - Zusammensetzen und gemeinsam am Prozess arbeiten
 - Viele Kunden haben bereits dutzende Prozessdiagramme
-- Prozess kann z.B. so aussehen
+- einfacher Prozess kann so aussehen
 
 
 ---
 
 
-background-image: url(img/chart_background_2.jpg)
+background-image: url(img/reservation_bright.png)
+background-size: contain
 ![:img_width 100%](img/process_2.svg)
 ???
 - Einzelne Prozesselemente erklären
@@ -172,53 +173,8 @@ background-image: url(img/chart_background_2.jpg)
 ---
 
 
-background-image: url(img/reservation.svg)
+background-image: url(img/create_claim.svg)
 background-size: contain
-???
-- Ist einfacher Automiet-prozess
-
-
----
-
-
-class: blackFont
-background-image: url(img/chart_background_2.jpg)
-# .center[Warum lohnt es sich so zu arbeiten?]
-<div class="overhead_part">
-.center[#### Das Programm betrachten]
-<img src="img/see.jpg", style="width: 100%; border-radius: 2px"/>
-<hr>
-.center[ohne den Code zu sehen]
-</div>
-
-<div class="overhead_part">
-.center[#### Das Programm verstehen]
-<img src="img/grasp.jpg", style="width: 100%; border-radius: 2px"/>
-<hr>
-.center[ohne Quelltext zu durchsuchen]
-</div>
-
-***
-***
-#### .center[Die Fachliche Implementierung wird durch Software gestützt, statt in ihr vergraben]
-#### .center[Das Modell ist Doku und Bestandteil zugleich, und kann auch mit nicht-nerds besprochen werden]
-???
-- zusammengefasst: Trennung von fachlicher und technischer Implementierung
-- Programm betrachten, ohne code zu sehen
-- Programm verstehen, ohne Quelltext zu durchsuchen
-- Programmablauf anpassen, ohne Code anzufassen
-- Fachliche Implementierung gestützt, statt vergraben
-- Modell = Doku und Bestandteil, auch für nicht-nerds
-TODO: Besseres "Verstehen"-Foto finden (close-up?)
-
-
----
-
-
-background-image: url(img/retourenprozess.svg)
-background-size: contain
-class: center, middle
-# .center[TODO: Brauerei-Retourenprozess einfügen]
 ???
 - Ist Retourenprozess einer Brauerei
 - Ist echter Prozess der tatsächlich in verwendung ist
@@ -231,36 +187,58 @@ class: center, middle
 ---
 
 
+class: center, blackFont
+background-image: url(img/reservation_bright.png)
+background-size: contain
+# .center[Warum lohnt es sich, so zu arbeiten?]
+<div class="overhead_part">
+.center[#### Das Programm betrachten]
+<img src="img/see.jpg", style="width: 50%; border-radius: 2px"/>
+<hr>
+.center[ohne den Code zu sehen]
+</div>
+
+
+---
+
+
+class: center, blackFont
+background-image: url(img/reservation_bright.png)
+background-size: contain
+# .center[Warum lohnt es sich, so zu arbeiten?]
+<div class="overhead_part">
+.center[#### Das Programm verstehen]
+<img src="img/grasp.jpg", style="width: 50%; border-radius: 2px"/>
+<hr>
+.center[ohne Quelltext zu durchsuchen]
+</div>
+
+
+---
+
+
+
+class: center, blackFont
+background-image: url(img/reservation_bright.png)
+background-size: contain
+# .center[Warum lohnt es sich, so zu arbeiten?]
+
+***
+***
+#### .center[Die Fachliche Implementierung wird durch Software gestützt, statt in ihr vergraben]
+#### .center[Das Modell ist Doku und Bestandteil zugleich, und kann auch mit nicht-nerds besprochen werden]
+???
+- Fachliche Implementierung nicht im Code vergraben
+- "Überlegt mal, Das Modell ist Doku und Bestandteil zu gleich, kann auch mit nicht-nerds besproche werden"
+
+
+---
+
+
 background-image: url(img/reservation.svg)
 background-size: contain
 ???
 - Prozess einmal genau durchgehen
-
-
----
-
-
-class: center, middle, blackFont
-background-image: url(img/chart_background_2.jpg)
-# .center[Demo-Zeit!]
-???
-- Erster durchgang: Es geht
-- Zweiter durchgang: Änderung direkt angewendet -> kein Codegenerator
-- ggf. dritter durchgang: Tokendetails (zeigen, wo er lang gelaufen ist)
-- TODO: Demo vorbereiten
-
-
----
-
-
-class: center, middle, blackFont
-background-image: url(img/collaborate_bright.jpg)
-## Eine ProcessEngine verbindet die vorteile beider Welten
-Eine direkte einbindung der Fachlichen Prozesse
-
-Basierend auf der technischen Umsetzung eines modernen Stacks
-???
-- Code kann in sauberem Stack geschrieben werden, und der Prozess direkt integriert werden
 
 
 ---
@@ -292,4 +270,9 @@ Vorteile gegenüber anderer ProcessEngines:
 
 class: center, middle, blackFont
 background-image: url(img/collaborate_bright.jpg)
-# ... Fragen?
+## Eine ProcessEngine verbindet die Vorteile beider Welten
+Eine direkte Einbindung der fachlichen Prozesse
+
+Basierend auf der technischen Umsetzung eines modernen Stacks
+???
+- Code kann in sauberem Stack geschrieben werden, und der Prozess direkt integriert werden
