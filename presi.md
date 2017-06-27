@@ -1,5 +1,6 @@
 layout: true
 class: content
+background-image: url(img/office_2_bright.jpg)
 
 ---
 
@@ -8,606 +9,286 @@ class: center, middle, whiteFont
 background-image: url(img/gears.jpg)
 
 # ProcessEngineJS
-Demo einer verteilen Typescript Process Engine
+Demo einer verteilten Typescript Process Engine
 ???
-- Projekt vorstellen
-- stellt euch szenario vor
-- Kunde meldet sich
-
----
-
-
-class: next_slow
-background-image: url(img/office.jpg)
-???
-- hat Autovermietung
-
---
-
-
-class: next_slow
-.float_left.margin_sm[&zwnj;]
-&zwnj;
-***
-.speech[![:img_width 90px](img/car_rent.png)]
-???
-- will reservierungs-prozess automatisieren
-- bestellen läuft manuell
-- sachbearbeiter -> email, eintragen, antworten
-- Kunde weiß was er von der Software will
+- Unser unternehmen, die PottJS GmbH
+- Konnte vor 3 Monaten einen super Auftrag an Land ziehen
 
 
 ---
 
+.left_half.center[
+![:img_width 50%](img/client.svg)
+]
+.right_half[
+.speech[
+Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.   
 
-class: next_slow, blackFont
-background-image: url(img/office.jpg)
+Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.   
 
-.float_left.margin_sm[Was soll umgesetzt werden?]
-&zwnj;
-***
-.speech[.center[![:img_width 90px](img/car_rent.png).padding_left_sm[![:img_width 90px](img/process.svg)]]
-- **Prozessablauf**
-- Bestellung aufgeben
-- ggf. genehmigen
-- Reservierung speichern
-- Bestätigung senden (email)
-- Schlüssel bereitstellen]
+Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.   
 
+Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.   
+
+Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis.
+]]
 ???
-- client: prozessablauf & erwartungen
-- unsere Aufgabe: technische Umsetzung -> in code gießen -> Programm erstellen
-
----
-
-
-class: next_slow, blackFont
-background-image: url(img/office.jpg)
-
-.center[
-.float_left.margin_sm[Was soll umgesetzt werden?]
-.float_right.margin_sm[Wie soll es umgesetzt werden?]]
-
-&zwnj;
-
-***
-.speech[.center[![:img_width 90px](img/car_rent.png).padding_left_sm[![:img_width 90px](img/process.svg)]]
-- **Prozessablauf**
-- Bestellung aufgeben
-- ggf. genehmigen
-- Reservierung speichern
-- Bestätigung senden (email)
-- Schlüssel bereitstellen]
-.speech_own[.center[![:img_width 90px](img/toolbox.svg)]
-- **implementierung**
-- Tech Stack
-- Infrastruktur
-- Services]
-
-???
-- Fachliche (was) vs technische (wie) sicht auf gleiche software
-- herkömmlich: Programm beinhaltete fachliche und technische implementierung (verschmolzen)
-- alternativ: ProcessEngine bauen
+- Kunde hat uns in langen meetings seine Anforderungen dargelegt
+- Wir direkt: Jo, machen wir
 
 
 ---
-
-
-class: next_slow, blackFont
-background-image: url(img/office.jpg)
-
-.center[
-.float_left.margin_sm[Was soll umgesetzt werden?]
-.float_right.margin_sm[Wie soll es umgesetzt werden?]]
-
-
-&zwnj;
-***
-.speech[.center[![:img_width 90px](img/car_rent.png).padding_left_sm[![:img_width 90px](img/process.svg)]]
-- **Prozessablauf**
-- Bestellung aufgeben
-- ggf. genehmigen
-- Reservierung speichern
-- Bestätigung senden (email)
-- Schlüssel bereitstellen]
-<img class="pe_chain" src="img/chain.svg" style="left: 19px"/>
-<div class="center_box" style=" display: inline-block;width: 348px; margin-top: 40px;">
-  <div class="center_box_content box_white" style="width: 250px;">
-ProcessEngineJS
-<hr>
-![:img_width 90px](img/gears.svg)
-  </div>
-</div>
-<img class="pe_chain" src="img/chain.svg" style="left: -19px"/>
-.speech_own[.center[![:img_width 90px](img/toolbox.svg)]
-- **implementierung**
-- Tech Stack
-- Infrastruktur
-- Services]
-
-???
-- Lose kopplung, bringt beide sichten zusammen
-
-- Definition Process Engine
-  - führt Modell aus (Orchestriert)
-  - herkömmlich: einzelne Serveranwendung
-
-- Definition PEJS
-  - Framework, stellt Toolset bereit, um eigene PE zu bauen, die aus beliebig vielen teilnehmern/clients auf verschiedensten geräten besteht
-  - (verteilt), einzeln oder mehrere führen prozess aus, je nach features/rechten/verfügbarkeit
-
-- ProcessEngine-Implementierung sieht wie folgt aus:
-
----
-
-
-class: next_slow
-background-image: url(img/office.jpg)
-background-size: 200%
-
-<img class="pe_chain_big" src="img/chain.svg" style="left: -6%"/>
-<img class="pe_chain_big" src="img/chain.svg" style="right: -6%"/>
-
-<div class="center_box">
-  <div class="center_box_content box_white big_box">
-
-.center.margin_bottom_sm[### ProcessEngineJS]
-
-???
-- Prozess ausführen benötigt zwei dinge
-
-
---
-
 
 .left_half[
-Auszuführender Prozess  
-(BPMN)
-***
-![:img_width 300px](img/process_2_bw.svg)]
-
-???
-- einen Prozess
-  - einfacher Beispielprozess
-  - muss Implementierung für Prozesskomponenten her
-
---
-
-
-.right_half[
-.center[Implementierung der Prozesskomponenten
-(JavaScript)]
-.left.code_block[
-```Typescript
-import {
-  createTransport,
-  SentMessageInfo,
-  SendMailOptions} from 'nodemailer';
-import {IMailService} from 'mail_service_contracts';
-
-export class MailService implements IMailService {
-
-  public config: any;
-
-  public send(mailOptions: SendMailOptions): Promise<SentMessageInfo> {
-    const transporter = createTransport(this.config.transporter);
-    return transporter.sendMail(mail);
-  }
-}
-```
+.speech_own[
+### IoC
+### Clean code
+### Microservices
+### Single-Responsibility
+### Schichtenarchitektur
+### Test-driven development
+]]
+.right_half.center[
+![:img_width 50%](img/developer.svg)
 ]
-]
-
-  </div>
-</div>
 ???
-- Wenn prozesskomponenten-implementierungen vorhanden: muss ausgeführt werden
-- Prozess und implementierung müssen zusammengebracht werden
-- hier kommt PEJS ins spiel
+- Nach allen Regeln der Kunst
 
 
 ---
 
 
-class: next_slow
-background-image: url(img/office.jpg)
-background-size: 200%
+class: middle
+.left_half.center[
+![:img_width 50%](img/client_unhappy.svg)
+]
+.right_half.center[
+![:img_width 100%](img/shiny_app.svg)
+]
+???
+- Kunde nicht _wirklich_ zufrieden
+- Details passen nicht
+- Anforderungen nicht genau beachtet
+- Anforderungen mittlerweile geändert
+- Funktionalität nicht _ganz_ vollständig
+- Warum?
 
-<img class="pe_chain_big" src="img/chain.svg" style="left: -6%"/>
-<img class="pe_chain_big" src="img/chain.svg" style="right: -6%"/>
 
-<div class="center_box">
-  <div class="center_box_content box_white big_box">
+---
 
-.center.margin_bottom_sm[### ProcessEngineJS]
 
+class: middle
 .left_half[
-Auszuführender Prozess  
-(BPMN)
-***
-![:img_width 300px](img/process_2_bw.svg)]
+.left_half[![:img_width 90%](img/client_unhappy.svg)]
+.right_half[.speech[
+Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.   
 
-
-.right_half[
-.center[Implementierung der Prozesskomponenten
-(JavaScript)]
-.left.code_block[
-```Typescript
-import {
-  createTransport,
-  SentMessageInfo,
-  SendMailOptions} from 'nodemailer';
-import {IMailService} from 'mail_service_contracts';
-
-export class MailService implements IMailService {
-
-  public config: any;
-
-  public send(mailOptions: SendMailOptions): Promise<SentMessageInfo> {
-    const transporter = createTransport(this.config.transporter);
-    return transporter.sendMail(mail);
-  }
-}
-```
+Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
+]]
 ]
-
-<div class="entity_box box_blue">
-  <div class="left_half">
-.left.entity_title[Eigene Services/Entitäten]
-.entity[MailService]
-.entity[MailReportEntity]
-  </div>
-  <div class="right_half">
-.left.entity_title[ProcessEngine Services/Entitäten]
-.entity[ServiceTask]
-.entity[NodeInstance]
-.entity[StartEvent]
-.entity[EndEvent]
-.entity[weitere...]
-  </div>
-</div>
-<div class="entity_box box_orange">
-.left.entity_title[ProcessEngine Basis]
-.entity[process_engine]
-.entity[core]
-.entity[messagebus]
-.entity[feature]
-.entity[routing]
-.entity[bootstrapper]
-.entity[datastore]
-.entity[iam]
-.entity[addict_ioc]
-</div>
+.right_half.left[
+![:img_width 57%](img/bad_placement.svg)
 ]
-
-  </div>
-</div>
-
 ???
-- viele kleine komponenten
-- blau = weitere Services
-- orange = basis/kern von PEJS
-- blau + orange = gesamte anwendung / deployable client
-- Wenn process_engine den task ausführt, und bei "Mail Senden" ankommt
+- Umsetzung der Kundenanforderungen passiert genau da
+- Ist im kompletten code verteilt, nicht einsehbar
+
 
 ---
 
 
-class: next_slow
-background-image: url(img/office.jpg)
-background-size: 200%
-
-<img class="pe_chain_big" src="img/chain.svg" style="left: -6%"/>
-<img class="pe_chain_big" src="img/chain.svg" style="right: -6%"/>
-
-<div class="center_box">
-  <div class="center_box_content box_white big_box">
-
-.center.margin_bottom_sm[### ProcessEngineJS]
-
+class: top
+.center[![:img_width 10%](img/conflict.svg)]
+.left_half.center[
 .left_half[
-Auszuführender Prozess  
-(BPMN)
-***
-![:img_width 300px](img/process_2.svg)]
-
-
+![:img_width 90%](img/client_unhappy.svg)
+]
 .right_half[
-.center[Implementierung der Prozesskomponenten 
-(JavaScript)]
-
-.left.code_block.glow[
-```Typescript
-import {
-  createTransport,
-  SentMessageInfo,
-  SendMailOptions} from 'nodemailer';
-import {IMailService} from 'mail_service_contracts';
-
-export class MailService implements IMailService {
-
-  public config: any;
-
-  public send(mailOptions: SendMailOptions): Promise<SentMessageInfo> {
-    const transporter = createTransport(this.config.transporter);
-    return transporter.sendMail(mail);
-  }
-}
-```
+.speech[
+![:img_width 100%](img/process_flow.svg)
 ]
-
-
-<div class="entity_box box_blue">
-  <div class="left_half">
-.left.entity_title[Eigene Services/Entitäten]
-.entity.glow[MailService]
-.entity[MailReportEntity]
-  </div>
-  <div class="right_half">
-.left.entity_title[ProcessEngine Services/Entitäten]
-.entity.glow[ServiceTask]
-.entity.glow[NodeInstance]
-.entity[StartEvent]
-.entity[EndEvent]
-.entity[weitere...]
-  </div>
-</div>
-<div class="entity_box box_orange">
-.left.entity_title[ProcessEngine Basis]
-.entity.glow[process_engine]
-.entity[core]
-.entity[messagebus]
-.entity[feature]
-.entity[routing]
-.entity[bootstrapper]
-.entity[datastore]
-.entity[iam]
-.entity[addict_ioc]
-</div>
 ]
-
-  </div>
-</div>
+]
+.right_half.center[
+.right_half[
+![:img_width 90%](img/developer.svg)
+]
+.left_half[
+.speech_own[
+![:img_width 100%](img/toolbox_bright.svg)
+]
+]
+]
 ???
-- processengine -> NodeInstance (nicht pfeil oder gate) -> ServiceTask -> MailService
-- irgendwo deployen
-- kann mail senden
-- So viel zum aufbau einer ProcessEngineJS-Anwendung
-- TODO: Analogie finden
+- Sprechen unterschiedliche sprachen
+- Fachlich vs technisch
+- prosa vs code
 
 
 ---
 
 
-class: next_slow, blackFont
-background-image: url(img/office.jpg)
-
-.center[
-.float_left.margin_sm[Was soll umgesetzt werden?]
-.float_right.margin_sm[Wie soll es umgesetzt werden?]]
-
-
-&zwnj;
-.speech[.center[![:img_width 90px](img/car_rent.png).padding_left_sm[![:img_width 90px](img/process.svg)]]
-- **Prozessablauf**
-- Bestellung aufgeben
-- ggf. genehmigen
-- Reservierung speichern
-- Bestätigung senden (email)
-- Schlüssel bereitstellen]
-<img class="pe_chain" src="img/chain.svg" style="left: 19px"/>
-<div class="center_box" style=" display: inline-block;width: 348px; margin-top: 40px;">
-  <div class="center_box_content box_white" style="width: 250px;">
-ProcessEngineJS
-<hr>
-![:img_width 90px](img/gears.svg)
-  </div>
-</div>
-<img class="pe_chain" src="img/chain.svg" style="left: -19px"/>
-.speech_own[.center[![:img_width 90px](img/toolbox.svg)]
-- **implementierung**
-- Tech Stack
-- Infrastruktur
-- Services]
-
+class: top
+.center[![:img_width 10%](img/no_conflict.svg)]
+.left_half.center[
+.left_half[
+![:img_width 90%](img/client.svg)
+]
+.right_half[
+.speech[
+![:img_width 100%](img/process_bright.svg)
+]
+]
+]
+.right_half.center[
+.right_half[
+![:img_width 90%](img/developer.svg)
+]
+.left_half[
+.speech_own[
+![:img_width 100%](img/process_bright.svg)
+]
+]
+]
 ???
-- Anwendung mit PEJS fertig bauen
-- Kunde glücklich
-- alternative: Direkt implementieren
-  - Programm bauen, dass kundenprozesse direkt implementiert
+- Die gleiche Sprache sprechen (BPMN)
+- Realisiert durch Process Engine
+- Zusammensetzen und gemeinsam am Prozess arbeiten
+- Viele Kunden haben bereits dutzende Prozessdiagramme
+- Prozess kann z.B. so aussehen
 
 
 ---
 
 
-class: next_slow, blackFont
-background-image: url(img/office.jpg)
-
-.center[
-.float_left.margin_sm[Was soll umgesetzt werden?]
-.float_right.margin_sm[Wie soll es umgesetzt werden?]]
-
-
-&zwnj;
-.speech[.center[![:img_width 90px](img/car_rent.png).padding_left_sm[![:img_width 90px](img/process.svg)]]
-- **Prozessablauf**
-- Bestellung aufgeben
-- ggf. genehmigen
-- Reservierung speichern
-- Bestätigung senden (email)
-- Schlüssel bereitstellen]
-<div class="center_box" style=" display: inline-block;width: 537px; margin-top: 40px;">
-  <div class="center_box_content box_white" style="width: 336px; max-width: none; height: 230px">
-Alternative: Direkt implementieren
-    <div class="appbg" style="top: 175px; left: 528px"></div>
-    <div class="processbg" style="position: absolute; top: 175px; left: 528px"></div>
-  </div>
-</div>
-.speech_own[.center[![:img_width 90px](img/toolbox.svg)]
-- **implementierung**
-- Tech Stack
-- Infrastruktur
-- Services]
-???
-- Warum ProcessEngine-Overhead aufbringen?
-
-
----
-
-class: next_slow, blackFont
 background-image: url(img/chart_background_2.jpg)
-# .center[Warum den ProcessEngine-Overhead aufbringen?]
+![:img_width 100%](img/process_2.svg)
 ???
-- zusammengefasst: Trennung von fachlicher und technischer Implementierung
-- Programm betrachten, ohne code zu sehen
+- Einzelne Prozesselemente erklären
+- Prozesse werden auch etwas größer
 
 
---
+---
 
 
-class: next_slow
+background-image: url(img/reservation.svg)
+background-size: contain
+???
+- Ist einfacher Automiet-prozess
+
+
+---
+
+
+class: blackFont
+background-image: url(img/chart_background_2.jpg)
+# .center[Warum lohnt es sich so zu arbeiten?]
 <div class="overhead_part">
 .center[#### Das Programm betrachten]
 <img src="img/see.jpg", style="width: 100%; border-radius: 2px"/>
 <hr>
 .center[ohne den Code zu sehen]
 </div>
-???
-- Programm verstehen, ohne Quelltext zu durchsuchen
 
-
---
-
-
-class: next_slow
 <div class="overhead_part">
 .center[#### Das Programm verstehen]
 <img src="img/grasp.jpg", style="width: 100%; border-radius: 2px"/>
 <hr>
 .center[ohne Quelltext zu durchsuchen]
 </div>
-???
-- Programmablauf anpassen, ohne Code anzufassen
 
-
---
-
-
-class: next_slow
-<div class="overhead_part">
-.center[#### Den Ablauf anpassen]
-<img src="img/edit.jpg", style="width: 100%; border-radius: 2px"/>
-<hr>
-.center[ohne den Code anzufassen]
-</div>
-???
-- Fachliche Implementierung gestützt, statt vergraben
-- Modell = Doku und Bestandteil, auch für nicht-nerds
-
-
---
-
-
-class: next_slow
-***
 ***
 ***
 #### .center[Die Fachliche Implementierung wird durch Software gestützt, statt in ihr vergraben]
 #### .center[Das Modell ist Doku und Bestandteil zugleich, und kann auch mit nicht-nerds besprochen werden]
-
 ???
+- zusammengefasst: Trennung von fachlicher und technischer Implementierung
+- Programm betrachten, ohne code zu sehen
+- Programm verstehen, ohne Quelltext zu durchsuchen
+- Programmablauf anpassen, ohne Code anzufassen
+- Fachliche Implementierung gestützt, statt vergraben
+- Modell = Doku und Bestandteil, auch für nicht-nerds
 TODO: Besseres "Verstehen"-Foto finden (close-up?)
 
 
 ---
 
 
-class: center, middle, next_slow, blackFont
+background-image: url(img/retourenprozess.svg)
+background-size: contain
+class: center, middle
+# .center[TODO: Brauerei-Retourenprozess einfügen]
+???
+- Ist Retourenprozess einer Brauerei
+- Ist echter Prozess der tatsächlich in verwendung ist
+- Kunde versteht den Prozess
+- Den will man nicht in Code vergraben haben
+- Modelle existierten schon vor Software
+- TODO: Den großen Retourenprozess einbetten
+
+
+---
+
+
+background-image: url(img/reservation.svg)
+background-size: contain
+???
+- Prozess einmal genau durchgehen
+
+
+---
+
+
+class: center, middle, blackFont
 background-image: url(img/chart_background_2.jpg)
 # .center[Demo-Zeit!]
 ???
-TODO: Demo vorbereiten
+- Erster durchgang: Es geht
+- Zweiter durchgang: Änderung direkt angewendet -> kein Codegenerator
+- ggf. dritter durchgang: Tokendetails (zeigen, wo er lang gelaufen ist)
+- TODO: Demo vorbereiten
 
 
 ---
 
 
-class: left, next_slow, blackFont
-background-image: url(img/chart_background_2.jpg)
-.left_half[
-# Mögliche Szenarien
-]
+class: center, middle, blackFont
+background-image: url(img/collaborate_bright.jpg)
+## Eine ProcessEngine verbindet die vorteile beider Welten
+Eine direkte einbindung der Fachlichen Prozesse
 
-
---
-
-
-***
-- Szenario 1
+Basierend auf der technischen Umsetzung eines modernen Stacks
 ???
-TODO: einzelne szenarion auflisten
-
-
---
-
-
-- Szenario 2
-
-
---
-
-
-- Szenario 3
-
-
---
-
-
-- Szenario 4
+- Code kann in sauberem Stack geschrieben werden, und der Prozess direkt integriert werden
 
 
 ---
 
-class: left, next_slow, blackFont
-background-image: url(img/chart_background_2.jpg)
-# .left_half[Ausblick]
 
---
-
+class: middle, blackFont
+background-image: url(img/collaborate_bright.jpg)
+## Die ProcessEngineJS
+Auf Typescript basierendes Framework zum erstellen eigener, verteilter ProcessEngines!
+- Typescript
+- Node/Browser
+- IoC
+- Microservices
+- Schichtenarchitektur
 
 ***
-- Isomorphie
-???
-TODO: einzelne ausblick-punkte auflisten
 
-
---
-
-
-- Offlinefähigkeit
-
-
---
-
-
+Vorteile gegenüber anderer ProcessEngines:
+- Basiert auf JavaScript
+- Erstellen eigener Services und Entities
+- Anbinden externer Services und Schnittstellen
+- Deployen auf verschiedenen Plattformen
 - Verteilte Ausführung
+- Selbst entwickelt -> für die eigenen Bedürfnisse angepasst
 
 
---
+---
 
 
-- Ausblick 4
-
-
---
-
-***
-# .center[Vielen Dank fürs zuhören!]
-
-
---
-
-
-***
-# .center[... Fragen?]
-
+class: center, middle, blackFont
+background-image: url(img/collaborate_bright.jpg)
+# ... Fragen?
