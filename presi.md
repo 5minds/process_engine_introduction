@@ -47,6 +47,7 @@ Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie co
 ### Single-Responsibility
 ### Schichtenarchitektur
 ### Test-driven development
+### Continuous Deployment
 ]]
 .right_half.center[
 ![:img_width 50%](img/developer.svg)
