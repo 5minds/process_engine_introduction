@@ -70,7 +70,8 @@ class: middle
 ]
 ???
 - Seht euch den kunden an: unzufrieden bei shiny app
-- Warum?
+- Er sagt: nicht wie beschrieben
+- Wo im code ist anforderung umgesetzt?
 
 
 ---
@@ -89,8 +90,8 @@ Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie co
 ![:img_width 57%](img/bad_placement.svg)
 ]
 ???
-- Umsetzung der Kundenanforderungen passiert genau da
-- Ist im kompletten code verteilt, nicht einsehbar
+- anforderungen <-> Projektstruktur
+- Wie kommt es zu unstimmigkeiten?
 
 
 ---
@@ -119,9 +120,8 @@ class: top
 ]
 ]
 ???
-- Sprechen unterschiedliche sprachen
-- Fachlich vs technisch
-- prosa vs code
+- unterschiedliche sprachen
+- Fachlich (fließtext) <-> technisch (code)
 
 
 ---
@@ -154,8 +154,12 @@ class: top
 ???
 - Die gleiche Sprache sprechen (BPMN)
 - Realisiert durch Process Engine
-- Zusammensetzen und gemeinsam am Prozess arbeiten
-- Viele Kunden haben bereits dutzende Prozessdiagramme
+
+
+- gemeinsam Prozesse entwickeln
+- Kunden haben bereits dutzende Prozessdiagramme
+
+
 - einfacher Prozess kann so aussehen
 
 
@@ -175,12 +179,13 @@ background-image: none
 background-image: url(img/create_claim.svg)
 background-size: contain
 ???
-- Ist Retourenprozess einer Brauerei
+- Brauerei-Retourenprozess
 - Ist echter Prozess der tatsächlich in verwendung ist
+***
 - Kunde versteht den Prozess
-- Den will man nicht in Code vergraben haben
+- Den **will man nicht in Code** vergraben haben
+***
 - Modelle existierten schon vor Software
-- TODO: Den großen Retourenprozess einbetten
 
 
 ---
@@ -226,10 +231,13 @@ background-size: contain
 <hr class="margin_bottom_lg"/>
 #### .center[Die fachliche Implementierung ist nicht im Code vergraben!]
 <hr class="margin_bottom_lg"/>
-#### .center[Das Modell ist Doku und Bestandteil zugleich!]
+#### .center[Das Modell ist Doku und Programmbestandteil zugleich!]
 ???
 - fachliche Implementierung nicht im Code vergraben
-- "Überlegt mal, Das Modell ist Doku und Bestandteil zu gleich, kann auch mit nicht-nerds besproche werden"
+***
+- "Überlegt mal, Das Modell ist **Doku** UND **Bestandteil** zugleich
+  
+  -> kann auch mit nicht-nerds besproche werden"
 
 
 ---
@@ -238,7 +246,19 @@ background-size: contain
 background-image: url(img/reservation.png)
 background-size: contain
 ???
-- Prozess einmal genau durchgehen
+- DEMO TIME!
+***
+- Setup beschreiben
+  - Fzg.-klasse *&&* extras wählen
+
+  - Luxusklasse genehmigen
+  
+  - Preisermittlung *&&* bestätigung
+
+  - Speichern *&&* Mail senden
+
+  - Schlüsselkasten öffnen
+
 
 
 ---
@@ -247,22 +267,31 @@ background-size: contain
 class: middle, blackFont
 background-image: url(img/collaborate_bright.jpg)
 ## Die ProcessEngineJS
-Auf TypeScript basierendes Framework zum Erstellen eigener, verteilter ProcessEngines!
+Ein in TypeScript entwickeltes Framework zum Erstellen eigener, verteilter Process Engines!
 - Typescript
 - Node/Browser
 - IoC
-- Micro Services
+- Microservices
 - Schichtenarchitektur
+???
+- ProcessEngineJS
 
-***
 
-Vorteile gegenüber anderen ProcessEngines:
-- Basiert auf JavaScript
+---
+
+
+class: middle, blackFont
+background-image: url(img/collaborate_bright.jpg)
+## Die ProcessEngineJS
+Vorteile gegenüber anderen Process Engines:
+- basiert auf JavaScript
 - Erstellen eigener Services und Entities
 - Anbinden externer Services und Schnittstellen
 - Deployen auf verschiedenen Plattformen
-- Verteilte Ausführung
-- Selbst entwickelt -> für die eigenen Bedürfnisse angepasst
+- verteilte Ausführung
+- selbst entwickelt -> für die eigenen Bedürfnisse angepasst
+???
+- ProcessEngineJS
 
 
 ---
@@ -292,5 +321,3 @@ background-image: url(img/collaborate_bright.jpg)
 .right_half.center[
 ## Huf Secure Mobile GmbH
 ]
-???
-- Code kann in sauberem Stack geschrieben werden, und der Prozess direkt integriert werden
