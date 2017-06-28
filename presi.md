@@ -188,14 +188,14 @@ background-size: contain
 
 
 class: center, blackFont
-background-image: url(img/reservation_bright.png)
-background-size: contain
+background-image: url(img/chart_background_2.jpg)
+background-size: cover
 # .center[Warum lohnt es sich, so zu arbeiten?]
 <div class="overhead_part">
 .center[#### Das Programm betrachten]
-<img src="img/see.jpg", style="width: 50%; border-radius: 2px"/>
-<hr>
 .center[ohne den Code zu sehen]
+<hr>
+<img src="img/see.jpg", style="width: 50%; border-radius: 2px"/>
 </div>
 
 
@@ -203,14 +203,14 @@ background-size: contain
 
 
 class: center, blackFont
-background-image: url(img/reservation_bright.png)
-background-size: contain
+background-image: url(img/chart_background_2.jpg)
+background-size: cover
 # .center[Warum lohnt es sich, so zu arbeiten?]
 <div class="overhead_part">
 .center[#### Das Programm verstehen]
-<img src="img/grasp.jpg", style="width: 50%; border-radius: 2px"/>
-<hr>
 .center[ohne Quelltext zu durchsuchen]
+<hr>
+<img src="img/grasp.jpg", style="width: 50%; border-radius: 2px"/>
 </div>
 
 
@@ -219,23 +219,24 @@ background-size: contain
 
 
 class: center, blackFont
-background-image: url(img/reservation_bright.png)
+background-image: url(img/reservation_bright_2.png)
 background-size: contain
 # .center[Warum lohnt es sich, so zu arbeiten?]
 
-***
-***
-#### .center[Die Fachliche Implementierung wird durch Software gestützt, statt in ihr vergraben]
-#### .center[Das Modell ist Doku und Bestandteil zugleich, und kann auch mit nicht-nerds besprochen werden]
+<hr class="margin_bottom_lg"/>
+<hr class="margin_bottom_lg"/>
+#### .center[Die fachliche Implementierung ist nicht im Code vergraben!]
+<hr class="margin_bottom_lg"/>
+#### .center[Das Modell ist Doku und Bestandteil zugleich!]
 ???
-- Fachliche Implementierung nicht im Code vergraben
+- fachliche Implementierung nicht im Code vergraben
 - "Überlegt mal, Das Modell ist Doku und Bestandteil zu gleich, kann auch mit nicht-nerds besproche werden"
 
 
 ---
 
 
-background-image: url(img/reservation.svg)
+background-image: url(img/reservation.png)
 background-size: contain
 ???
 - Prozess einmal genau durchgehen
@@ -247,16 +248,16 @@ background-size: contain
 class: middle, blackFont
 background-image: url(img/collaborate_bright.jpg)
 ## Die ProcessEngineJS
-Auf Typescript basierendes Framework zum erstellen eigener, verteilter ProcessEngines!
+Auf TypeScript basierendes Framework zum Erstellen eigener, verteilter ProcessEngines!
 - Typescript
 - Node/Browser
 - IoC
-- Microservices
+- Micro Services
 - Schichtenarchitektur
 
 ***
 
-Vorteile gegenüber anderer ProcessEngines:
+Vorteile gegenüber anderen ProcessEngines:
 - Basiert auf JavaScript
 - Erstellen eigener Services und Entities
 - Anbinden externer Services und Schnittstellen
@@ -271,8 +272,26 @@ Vorteile gegenüber anderer ProcessEngines:
 class: center, middle, blackFont
 background-image: url(img/collaborate_bright.jpg)
 ## Eine ProcessEngine verbindet die Vorteile beider Welten
-Eine direkte Einbindung der fachlichen Prozesse
+eine direkte Einbindung der fachlichen Prozesse
 
-Basierend auf der technischen Umsetzung eines modernen Stacks
+basierend auf der technischen Umsetzung eines modernen Stacks
+???
+- Code kann in sauberem Stack geschrieben werden, und der Prozess direkt integriert werden
+
+
+---
+
+
+class: center, middle, blackFont
+background-image: url(img/collaborate_bright.jpg)
+# Vielen Dank an
+
+.left_half.center[
+## QUANTUSflow Software GmbH
+]
+
+.right_half.center[
+## Huf Secure Mobile GmbH
+]
 ???
 - Code kann in sauberem Stack geschrieben werden, und der Prozess direkt integriert werden

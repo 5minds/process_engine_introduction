@@ -8,16 +8,12 @@
 
 Kundensprache: Zettel statt ablaufdiagramm
 
--> Happy dev -> mit sonnenbrille
-
 -> Erste Autoreservierungsfolie ersetzen mit brauerei-folie
   -> "Warum so arbeiten"-folie
     -> Autoreservierungs-folie
 
   
 -> "Gleiche Sprache"-Folie: BPMN (Business Process Model Notation)
-
--> Miet-prozess: Gruppieren, etwas gröber erklären
 
 -> "Warum so arbeiten"-folie
   -> Auf einzelne Folien (drei insgesamt) (Überschrift bleibt)
@@ -28,10 +24,14 @@ Kundensprache: Zettel statt ablaufdiagramm
 
 -> "Verbinden beider Welten"-Folie ans ende packen, als Fazit-Folie
 
--> Grobe überblick anderer ProcessEngines
 
 -> (vor)letzte Folie noch etwas anpassen
 
--> Weniger notitzen, dafür die Übergänge genauer
-
+-> Miet-prozess: Gruppieren, etwas gröber erklären
 -> Am ende: Danke fürs zuhören & Danke an QFL & HUF
+
+
+
+-> Happy dev -> mit sonnenbrille
+-> Grobe überblick anderer ProcessEngines
+-> Weniger notizen, dafür die Übergänge genauer
