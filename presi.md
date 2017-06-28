@@ -63,7 +63,7 @@ Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie co
 
 class: middle
 .left_half.center[
-![:img_width 50%](img/client_unhappy.svg)
+![:img_width 50%](img/client_unhappy_2.svg)
 ]
 .right_half.center[
 ![:img_width 100%](img/shiny_app.svg)
@@ -78,7 +78,7 @@ class: middle
 
 class: middle
 .left_half[
-.left_half[![:img_width 90%](img/client_unhappy.svg)]
+.left_half[![:img_width 90%](img/client_unhappy_2.svg)]
 .right_half[.speech[
 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.   
 
@@ -100,7 +100,7 @@ class: top
 .center[![:img_width 10%](img/conflict.svg)]
 .left_half.center[
 .left_half[
-![:img_width 90%](img/client_unhappy.svg)
+![:img_width 90%](img/client_unhappy_2.svg)
 ]
 .right_half[
 .speech[
@@ -141,7 +141,7 @@ class: top
 ]
 .right_half.center[
 .right_half[
-![:img_width 90%](img/developer.svg)
+![:img_width 90%](img/developer_happy.svg)
 ]
 .left_half[
 .speech_own[
@@ -161,9 +161,8 @@ class: top
 
 ---
 
-
-background-image: url(img/reservation_bright.png)
-background-size: contain
+class: middle
+background-image: none
 ![:img_width 100%](img/process_2.svg)
 ???
 - Einzelne Prozesselemente erklären
